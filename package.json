@@ -12,7 +12,8 @@
   },
   "author": "Laurent Janet <laurent.janet@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "lite-server": "^2.2.2"
   }
 }
