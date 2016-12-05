@@ -11,5 +11,8 @@
     "url": "git@git.laurentjanet.fr:touch-up/web.git"
   },
   "author": "Laurent Janet <laurent.janet@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lite-server": "^2.2.2"
+  }
 }
