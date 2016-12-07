@@ -59,6 +59,16 @@ body {
     background-color: #3f3f54;
 }
 
+header {
+    padding: 21px 40px 24px 40px;
+}
+
+header text {
+    font-size: 20px;
+    font-weight: 500;
+    fill: #FFF;
+}
+
 .catch-phrase {
     background-color: #48c8bc;
 }
