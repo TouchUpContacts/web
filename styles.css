@@ -59,6 +59,8 @@ table {
 
 body {
     background-color: #3f3f54;
+    color: #FFFFFF;
+    font-size: 20px;
 }
 
 header {
@@ -81,6 +83,28 @@ header a {
 
 .catch-phrase {
     background-color: #48c8bc;
+    height: 360px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 80px;
+}
+
+.catch-phrase svg {
+    flex-shrink: 0;
+}
+
+.catch-phrase section {
+    margin-bottom: 127px;
+}
+
+.catch-phrase h1 {
+    color: #3f3f54;
+    margin-bottom: 10px;
+}
+
+.catch-phrase p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
 }
 
 .make-an-assessment, .group-them-all {
