@@ -81,12 +81,15 @@ header a {
     text-decoration: none;
 }
 
+body > section {
+    padding: 0 10%;
+    display: flex;
+}
+
 .catch-phrase {
     background-color: #48c8bc;
     height: 360px;
-    display: flex;
     align-items: flex-end;
-    padding: 0 80px;
 }
 
 .catch-phrase svg {
@@ -109,8 +112,34 @@ header a {
 
 .make-an-assessment, .group-them-all {
     background-color: #f0f5f8;
+    color: #3f3f54;
+}
+
+.make-an-assessment {
+    height: 550px;
+    align-items: center;
 }
 
 .backup {
     background-color: #25c6da;
+}
+
+.content-block {
+    margin-right: 25%;
+}
+
+.content-block svg {
+    margin-bottom: 40px;
+}
+
+.content-block h2 {
+    margin-bottom: 15px;
+}
+
+.phone {
+    flex-shrink: 0;
+    width: 250px;
+    height: 100%;
+    background: url('images/img-phone-empty.png') transparent center no-repeat;
+    background-size: 100%;
 }
