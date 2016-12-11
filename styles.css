@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,400');
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -90,6 +90,11 @@ body > section {
 
 h2 {
     font-size: 35px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-weight: 300;
 }
 
 .catch-phrase {
@@ -137,15 +142,27 @@ h2 {
 
 .backup {
     background-color: #25c6da;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 10%;
+    text-align: center;
+}
+
+.backup svg {
+    margin-bottom: 50px;
+}
+
+.backup h2 {
+    margin-bottom: 30px;
+}
+
+.backup p {
+    max-width: 600px;
 }
 
 
 .content-block svg {
     margin-bottom: 40px;
-}
-
-.content-block h2 {
-    margin-bottom: 15px;
 }
 
 .phone {
