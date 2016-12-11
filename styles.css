@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,400,700');
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -172,6 +172,24 @@ p {
 
 .backup p {
     max-width: 600px;
+}
+
+.request-beta .inside {
+    display: block;
+    padding: 5% 10%;
+    text-align: center;
+}
+
+.request-beta h2 {
+    margin-bottom: 40px;
+}
+
+.request-beta__btn {
+    display: inline-block;
+    background-color: #48c8bc;
+    border-radius: 25px;
+    padding: 10px 30px;
+    box-shadow: 0px 2px 0px #3aa196;
 }
 
 .content-block p {
