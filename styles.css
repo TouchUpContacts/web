@@ -121,23 +121,23 @@ p {
     font-size: 35px;
 }
 
-.make-an-assessment, .group-them-all {
-    background-color: #f0f5f8;
-    color: #3f3f54;
-}
-
-.make-an-assessment, .keep-or-trash {
+.make-an-assessment, .keep-or-trash, .group-them-all {
     height: 550px;
     align-items: center;
     justify-content: space-between;
+}
+
+.make-an-assessment, .group-them-all {
+    background-color: #f0f5f8;
+    color: #3f3f54;
 }
 
 .make-an-assessment .content-block {
     margin-right: 5%;
 }
 
-.keep-or-trash .content-block {
-    margin-left: 5%;
+.keep-or-trash .content-block, .group-them-all .content-block {
+    margin-left: 90px;
 }
 
 .backup {
@@ -160,6 +160,9 @@ p {
     max-width: 600px;
 }
 
+.content-block p {
+    max-width: 500px;
+}
 
 .content-block svg {
     margin-bottom: 40px;
