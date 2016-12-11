@@ -121,18 +121,24 @@ h2 {
     color: #3f3f54;
 }
 
-.make-an-assessment {
+.make-an-assessment, .keep-or-trash {
     height: 550px;
     align-items: center;
+    justify-content: space-between;
+}
+
+.make-an-assessment .content-block {
+    margin-right: 5%;
+}
+
+.keep-or-trash .content-block {
+    margin-left: 5%;
 }
 
 .backup {
     background-color: #25c6da;
 }
 
-.content-block {
-    margin-right: 25%;
-}
 
 .content-block svg {
     margin-bottom: 40px;
