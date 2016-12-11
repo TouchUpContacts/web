@@ -88,6 +88,10 @@ body > section {
     display: flex;
 }
 
+h2 {
+    font-size: 35px;
+}
+
 .catch-phrase {
     background-color: #48c8bc;
     height: 360px;
