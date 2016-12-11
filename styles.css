@@ -83,6 +83,11 @@ header a {
     text-decoration: none;
 }
 
+body > section {
+    position: relative;
+    overflow: hidden;
+}
+
 body > section > .inside {
     max-width: 960px;
     padding: 0 10%;
@@ -100,9 +105,25 @@ p {
     font-weight: 300;
 }
 
+.bottom-round-hat::after, .top-round-hat::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 130vw;
+    border-radius: 130%;
+    height: 200px;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+
 .catch-phrase {
     background-color: #48c8bc;
     height: 360px;
+}
+
+.catch-phrase::after {
+    bottom: -72%;
+    background-color: #f0f5f8;
 }
 
 .catch-phrase .inside {
@@ -144,12 +165,17 @@ p {
     color: #3f3f54;
 }
 
+.make-an-assessment::after {
+    bottom: -48%;
+    background-color: #3f3f54;
+}
+
 .make-an-assessment .content-block {
     margin-right: 5%;
 }
 
 .keep-or-trash .content-block, .group-them-all .content-block {
-    margin-left: 90px;
+    margin-left: 5%;
 }
 
 .backup {
@@ -179,6 +205,11 @@ p {
     display: block;
     padding: 5% 10%;
     text-align: center;
+}
+
+.request-beta::before {
+    background-color: #f0f5f8;
+    transform: translate3d(-50%,-82%,0);
 }
 
 .request-beta h2 {
