@@ -47,6 +47,8 @@ p {
     border-radius: 30px;
     display: inline-block;
     cursor: pointer;
+    background-color: #48c8bc;
+    box-shadow: 0 2px 0 rgba(58, 161, 150, 1);
 }
 
 .section__content {
@@ -86,7 +88,8 @@ p {
     color: #3f3f54;
 }
 
-.analyze .call-to-action {
-    background-color: #48c8bc;
-    box-shadow: 0 2px 0 rgba(58, 161, 150, 1);
+/*** Play ***/
+.play {
+    color: #ffffff;
+    background-color: #1a509c;
 }
