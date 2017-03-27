@@ -8,10 +8,41 @@
     box-sizing: border-box;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #f0f5f8;
     color: #FFFFFF;
     font-size: 20px;
     line-height: 26px;
     font-family: 'Open Sans', sans-serif;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*** Take care of ***/
+.take-care-of {
+    background-color: #48c8bc;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.take-care-of p {
+    font-size: 45px;
+}
+
+.take-care-of .call-to-action {
+    background-color: #3f3f54;
+    box-shadow: 0 2px 0 rgba(24, 25, 33, 1);
+    padding: 14px 45px;
+    border-radius: 30px;
 }
