@@ -24,15 +24,48 @@ body {
 section {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 36px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.call-to-action {
+    color: #fff;
+    padding: 14px 45px;
+    border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.section__content {
+    max-width: 450px;
+    text-align: center;
+}
+
+.section__phone {
+    width: 250px;
+    height: 520px;
+    margin-left: 100px;
+    background: url("images/img-phone-empty.png") no-repeat;
+    background-size: contain;
 }
 
 /*** Take care of ***/
 .take-care-of {
     background-color: #48c8bc;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
@@ -45,4 +78,15 @@ section {
     box-shadow: 0 2px 0 rgba(24, 25, 33, 1);
     padding: 14px 45px;
     border-radius: 30px;
+}
+
+/*** Analyze ***/
+
+.analyze {
+    color: #3f3f54;
+}
+
+.analyze .call-to-action {
+    background-color: #48c8bc;
+    box-shadow: 0 2px 0 rgba(58, 161, 150, 1);
 }
