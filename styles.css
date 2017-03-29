@@ -78,7 +78,7 @@ p {
 
 /*** Analyze ***/
 
-.analyze, .keep {
+.analyze, .keep, .forget {
     color: #3f3f54;
 }
 
