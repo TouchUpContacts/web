@@ -95,6 +95,18 @@ p {
 .take-care-of .call-to-action, .be-afraid-of .call-to-action {
     background-color: #3f3f54;
     box-shadow: 0 2px 0 rgba(24, 25, 33, 1);
-    padding: 14px 45px;
-    border-radius: 30px;
+}
+
+.say {
+    background-color: #3f3f54;
+}
+
+.say p {
+    font-size: 45px;
+    line-height: 62px;
+}
+
+.say .call-to-action {
+    background-color: #25c6da;
+    box-shadow: 0 2px 0 rgba(66, 162, 179, 1);
 }
