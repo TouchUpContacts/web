@@ -34,6 +34,7 @@ h2 {
     font-size: 36px;
     margin-top: 0px;
     margin-bottom: 20px;
+    line-height: calc(36px * 1.3);
 }
 
 p {
@@ -75,26 +76,30 @@ p {
     font-size: 45px;
 }
 
-.take-care-of .call-to-action {
-    background-color: #3f3f54;
-    box-shadow: 0 2px 0 rgba(24, 25, 33, 1);
-    padding: 14px 45px;
-    border-radius: 30px;
-}
-
 /*** Analyze ***/
 
-.analyze {
+.analyze, .keep {
     color: #3f3f54;
 }
 
 /*** Play ***/
 .play {
-    color: #ffffff;
     background-color: #1a509c;
 }
 
 /*** Keep ***/
 .keep {
     color: #3f3f54;
+}
+
+/*** Be Afraid Of ***/
+.be-afraid-of {
+    background-color: #25c6da;
+}
+
+.take-care-of .call-to-action, .be-afraid-of .call-to-action {
+    background-color: #3f3f54;
+    box-shadow: 0 2px 0 rgba(24, 25, 33, 1);
+    padding: 14px 45px;
+    border-radius: 30px;
 }
