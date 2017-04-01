@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server .",
+    "move:assets": "cp -R images dist/",
+    "build:css": "node-sass src/styles.scss dist/styles.css",
+    "prebuild": "rimraf dist && mkdir -p dist && npm run move:assets",
+    "build": "npm run build:css",
+    "watch:css": "chokidar 'src/**/*.scss' -c 'npm run build:css'",
+    "watch": "npm run build && concurrently \"lite-server .\" \"npm run watch:css\"",
+    "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,6 +21,10 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "lite-server": "^2.2.2"
+    "chokidar-cli": "^1.2.0",
+    "concurrently": "^3.4.0",
+    "lite-server": "^2.2.2",
+    "node-sass": "^4.5.2",
+    "rimraf": "^2.6.1"
   }
 }

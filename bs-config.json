@@ -1,4 +1,4 @@
 {
   "port": 8080,
-  "files": ["./*.{html,css,js}"]
+  "files": ["./index.html", "./dist/*.{css,js}"]
 }
