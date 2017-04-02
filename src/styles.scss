@@ -21,6 +21,10 @@ body, html {
   font-family: 'Open Sans', sans-serif;
   transition: background-color .4s;
 
+  &--analyze, &--keep, &--forget {
+    background-color: #f0f5f8;
+  }
+
   &--take-care-of {
     background-color: #48c8bc;
   }
