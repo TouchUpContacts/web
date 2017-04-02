@@ -28,6 +28,6 @@
     "lite-server": "^2.2.2",
     "node-sass": "^4.5.2",
     "rimraf": "^2.6.1",
-    "uglify-js": "^2.8.20"
+    "uglify-js-harmony": "^2.7.5"
   }
 }
