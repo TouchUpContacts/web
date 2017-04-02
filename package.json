@@ -6,10 +6,12 @@
   "scripts": {
     "move:assets": "cp -R images dist/",
     "build:css": "node-sass src/styles.scss dist/styles.css",
+    "build:js": "cp src/app.js dist/ && uglifyjs dist/app.js -o dist/app.min.js --source-map dist/app.min.js.map --source-map-url app.min.js.map --source-map-root / -m -c --screw-ie8",
     "prebuild": "rimraf dist && mkdir -p dist && npm run move:assets",
-    "build": "npm run build:css",
+    "build": "concurrently \"npm run build:css\" \"npm run build:js\"",
     "watch:css": "chokidar 'src/**/*.scss' -c 'npm run build:css'",
-    "watch": "npm run build && concurrently \"lite-server .\" \"npm run watch:css\"",
+    "watch:js": "chokidar 'src/*.js' -c 'npm run build:js'",
+    "watch": "npm run build && concurrently \"lite-server .\" \"npm run watch:css\" \"npm run watch:js\"",
     "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,6 +27,7 @@
     "concurrently": "^3.4.0",
     "lite-server": "^2.2.2",
     "node-sass": "^4.5.2",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "uglify-js": "^2.8.20"
   }
 }
