@@ -13,12 +13,30 @@ body, html {
   padding: 0;
 }
 
-body {
-  background-color: #f0f5f8;
+.slide-container {
+  background-color: #48c8bc;
   color: #FFFFFF;
   font-size: 20px;
   line-height: 26px;
   font-family: 'Open Sans', sans-serif;
+  transition: background-color .4s;
+
+  &--take-care-of {
+    background-color: #48c8bc;
+  }
+
+  &--play {
+    background-color: #1a509c;
+  }
+
+  &--be-afraid-of {
+    background-color: #25c6da;
+  }
+
+  &--say {
+    background-color: #3f3f54;
+  }
+
 }
 
 nav {
@@ -96,7 +114,6 @@ p {
 
 /*** Take care of ***/
 .take-care-of {
-  background-color: #48c8bc;
   text-align: center;
   flex-direction: column;
 
@@ -113,14 +130,8 @@ p {
 }
 
 /*** Play ***/
-.play {
-  background-color: #1a509c;
-}
 
 /*** Be Afraid Of ***/
-.be-afraid-of {
-  background-color: #25c6da;
-}
 
 .take-care-of .call-to-action, .be-afraid-of .call-to-action {
   background-color: #3f3f54;
@@ -128,7 +139,6 @@ p {
 }
 
 .say {
-  background-color: #3f3f54;
   p {
     font-size: 45px;
     line-height: 62px;
