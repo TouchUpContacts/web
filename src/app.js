@@ -12,11 +12,7 @@
     let slideContainer = touchUpApp.slideContainer;
     let slideContainerModifierClass = `slide-container--${itemDataset.step}`;
 
-    if(!slideContainerModifierRegExp.test(slideContainer.className)) {
-      slideContainer.classList.add(slideContainerModifierClass);
-    } else {
-      slideContainer.className = slideContainer.className.replace(slideContainerModifierRegExp, slideContainerModifierClass);
-    }
+    slideContainer.className = slideContainer.className.replace(slideContainerModifierRegExp, slideContainerModifierClass);
   }
 
   touchUpApp.navItems.forEach((item) => {
