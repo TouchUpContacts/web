@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,400,700');
 
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+
 /***********************/
 /***  TouchUp rules  ***/
 /***********************/
@@ -13,36 +15,6 @@ body, html {
   padding: 0;
 }
 
-.slide-container {
-  background-color: #48c8bc;
-  color: #FFFFFF;
-  font-size: 20px;
-  line-height: 26px;
-  font-family: 'Open Sans', sans-serif;
-  transition: background-color .4s;
-
-  &--analyze, &--keep, &--forget {
-    background-color: #f0f5f8;
-  }
-
-  &--take-care-of {
-    background-color: #48c8bc;
-  }
-
-  &--play {
-    background-color: #1a509c;
-  }
-
-  &--be-afraid-of {
-    background-color: #25c6da;
-  }
-
-  &--say {
-    background-color: #3f3f54;
-  }
-
-}
-
 nav {
   position: fixed;
   top: 0;
@@ -52,6 +24,7 @@ nav {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  z-index: 1;
 
   .item {
     display: block;
@@ -71,52 +44,134 @@ nav {
   }
 }
 
-section {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 120px;
-}
-
-h2 {
-  font-weight: normal;
-  font-size: 36px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  line-height: calc(36px * 1.3);
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 25px;
-}
-
-.call-to-action {
-  color: #fff;
-  padding: 14px 45px;
-  border-radius: 30px;
-  display: inline-block;
-  cursor: pointer;
-  background-color: #48c8bc;
-  box-shadow: 0 2px 0 rgba(58, 161, 150, 1);
-}
-
-.section__content {
-  max-width: 450px;
-  text-align: center;
-}
-
-.section__phone {
+.phone {
+  position: absolute;
+  top: 50%; right: 120px;
+  transform: translateY(-50%);
   width: 250px;
-  height: 520px;
+  height: 524px;
   margin-left: 100px;
   background: url("images/img-phone-empty.png") no-repeat;
   background-size: contain;
+  opacity: 0;
+  transition: opacity .4s;
+
+  &__mask {
+    position: absolute;
+    width: 210px; height: 373px;
+    top: 77px; left: 21px;
+    overflow: hidden;
+  }
+
+  &__images {
+    height: calc(7 * 373px);
+    transition: transform 1s;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 373px;
+  }
+}
+
+.slide-container {
+  background-color: #48c8bc;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 26px;
+  font-family: 'Open Sans', sans-serif;
+  transition: background-color .4s;
+  width: 100vw; height: 100vh;
+  overflow: hidden;
+
+  &--analyze, &--keep, &--forget {
+    background-color: #f0f5f8;
+  }
+
+  &--analyze, &--play, &--keep, &--be-afraid-of, &--forget {
+    .phone {
+      opacity: 1;
+    }
+  }
+
+  &--take-care-of {
+    background-color: #48c8bc;
+    .section-container {
+      margin-right: 120px;
+    }
+  }
+
+  &--play {
+    background-color: #1a509c;
+  }
+
+  &--be-afraid-of {
+    background-color: #25c6da;
+  }
+
+  &--say {
+    background-color: #3f3f54;
+  }
+
+}
+
+.section-container, .phone {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.section-container {
+  height: 100vh;
+  text-align: center;
+  margin: 0 120px;
+
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 100vh;
+    z-index: 0;
+  }
+
+  .analyze, .play, .keep, .be-afraid-of, .forget {
+    max-width: 450px;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 36px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: calc(36px * 1.3);
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .call-to-action {
+    color: #fff;
+    padding: 14px 45px;
+    border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #48c8bc;
+    box-shadow: 0 2px 0 rgba(58, 161, 150, 1);
+  }
+
 }
 
 /*** Take care of ***/
+
+.take-care-of, .say {
+  width: calc(100vw - 240px);
+}
+
 .take-care-of {
   text-align: center;
   flex-direction: column;
@@ -125,12 +180,43 @@ p {
     font-size: 45px;
     line-height: 58.5px;
   }
+
+  &--active {
+    transform: translate3d(0, -100vh, 0);
+  }
+
+  &--leaved {
+    animation: fade-out .4s forwards;
+  }
 }
 
 /*** Analyze ***/
 
 .analyze, .keep, .forget {
   color: #3f3f54;
+}
+
+.analyze, .play, .keep, .be-afraid-of, .forget {
+  &--active {
+    opacity: 0;
+    animation: enter .6s $easeOutCubic forwards, fade-in .8s forwards;
+
+    p {
+      opacity: 0;
+      transform: translate3d(0, 100px, 0);
+      animation: enter-inner .8s $easeOutCubic forwards, fade-in 1s .2s forwards;
+    }
+
+    span {
+      opacity: 0;
+      transform: translate3d(0, 100px, 0);
+      animation: enter-inner 1s $easeOutCubic forwards, fade-in 1s .4s forwards;
+    }
+  }
+
+  &--leaved {
+    animation: fade-out .4s forwards;
+  }
 }
 
 /*** Play ***/
@@ -151,5 +237,45 @@ p {
   .call-to-action {
     background-color: #25c6da;
     box-shadow: 0 2px 0 rgba(66, 162, 179, 1);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes enter {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, -100vh, 0);
+  }
+}
+
+@keyframes enter-inner {
+  from {
+    transform: translate3d(0, 100px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }

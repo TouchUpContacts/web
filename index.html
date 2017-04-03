@@ -8,85 +8,70 @@
 <body class="slide-container slide-container--take-care-of">
   <nav>
     <li data-step="take-care-of" class="item item--active">&nbsp;</li>
-    <li data-step="analyze" class="item">&nbsp;</li>
-    <li data-step="play" class="item">&nbsp;</li>
-    <li data-step="keep" class="item">&nbsp;</li>
-    <li data-step="be-afraid-of" class="item">&nbsp;</li>
-    <li data-step="forget" class="item">&nbsp;</li>
-    <li data-step="say" class="item">&nbsp;</li>
+    <li data-step="analyze" data-screen="1" data-previous="take-care-of" class="item">&nbsp;</li>
+    <li data-step="play" data-screen="2" data-previous="analyze" class="item">&nbsp;</li>
+    <li data-step="keep" data-screen="3" data-previous="play" class="item">&nbsp;</li>
+    <li data-step="be-afraid-of" data-screen="4" data-previous="keep" class="item">&nbsp;</li>
+    <li data-step="forget" data-screen="5" data-previous="be-afraid-of" class="item">&nbsp;</li>
+    <li data-step="say" data-previous="forget" class="item">&nbsp;</li>
   </nav>
-  <section class="take-care-of">
-    <svg width="155" height="55" viewBox="0 0 155 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <title>TouchUp logo</title>
-      <defs>
-        <path d="M.006.007c2.922 5.112 8.363 8.549 14.593 8.549 6.199 0 11.617-3.403 14.55-8.474V.007H.005z" id="a"/>
-        <g fill="none" fill-rule="evenodd" id="spock">
-          <path class="logo__edge"d="M25.492 8.05c10.765 0 19.492 8.934 19.492 19.954 0 11.02-8.727 19.954-19.492 19.954S6 39.024 6 28.004" stroke="#FFF" stroke-width="1.68" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M16.094 37.625c.151.154.306.305.463.451l-.904-.925c.143.16.29.319.441.474" fill="#FFF"/>
-          <g>
-            <path d="M32.868 25.378c-.03-.004-.059-.005-.088-.007a11.748 11.748 0 0 1-.401 3.69c.005 0 .01.002.014.003.828.111 1.606-.623 1.737-1.64.131-1.019-.434-1.934-1.262-2.046M18.401 25.378c.03-.004.058-.005.087-.006a12.991 12.991 0 0 0 .427 3.88l-.015.003c-.828.112-1.611-.665-1.75-1.736-.137-1.07.423-2.03 1.251-2.141" fill="#FFF"/>
-            <g transform="translate(10.991 36.62)">
-              <mask id="b" fill="#fff">
-                <use xlink:href="#a"/>
-              </mask>
-              <path d="M.656 19.741C-1.912 11.902 2.214 3.416 9.87.788c7.658-2.629 15.947 1.595 18.514 9.434 2.568 7.839-1.558 16.325-9.215 18.953C11.512 31.804 3.223 27.58.656 19.741" fill="#FFF" mask="url(#b)"/>
+  <div class="section-container">
+    <section data-name="take-care-of" class="take-care-of take-care-of--active">
+      <svg width="155" height="55" viewBox="0 0 155 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>TouchUp logo</title>
+        <defs>
+          <path d="M.006.007c2.922 5.112 8.363 8.549 14.593 8.549 6.199 0 11.617-3.403 14.55-8.474V.007H.005z" id="a"/>
+          <g fill="none" fill-rule="evenodd" id="spock">
+            <path class="logo__edge"d="M25.492 8.05c10.765 0 19.492 8.934 19.492 19.954 0 11.02-8.727 19.954-19.492 19.954S6 39.024 6 28.004" stroke="#FFF" stroke-width="1.68" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.094 37.625c.151.154.306.305.463.451l-.904-.925c.143.16.29.319.441.474" fill="#FFF"/>
+            <g>
+              <path d="M32.868 25.378c-.03-.004-.059-.005-.088-.007a11.748 11.748 0 0 1-.401 3.69c.005 0 .01.002.014.003.828.111 1.606-.623 1.737-1.64.131-1.019-.434-1.934-1.262-2.046M18.401 25.378c.03-.004.058-.005.087-.006a12.991 12.991 0 0 0 .427 3.88l-.015.003c-.828.112-1.611-.665-1.75-1.736-.137-1.07.423-2.03 1.251-2.141" fill="#FFF"/>
+              <g transform="translate(10.991 36.62)">
+                <mask id="b" fill="#fff">
+                  <use xlink:href="#a"/>
+                </mask>
+                <path d="M.656 19.741C-1.912 11.902 2.214 3.416 9.87.788c7.658-2.629 15.947 1.595 18.514 9.434 2.568 7.839-1.558 16.325-9.215 18.953C11.512 31.804 3.223 27.58.656 19.741" fill="#FFF" mask="url(#b)"/>
+              </g>
+              <path d="M22.575 40.66c-.53-1.622.323-3.378 1.907-3.921 1.584-.544 3.299.33 3.83 1.951.531 1.622-.322 3.377-1.907 3.921-1.584.544-3.298-.33-3.83-1.951" fill="#FFF"/>
+              <path d="M23.672 34.21v3.507h.02c.008.801.794 1.423 1.764 1.423s1.757-.622 1.764-1.423h-.073V34.21h-3.475z" fill="#FFF"/>
+              <path fill="#FFF" d="M27.221 37.144l-3.53-1.445v-.813h3.53z"/>
+              <path d="M25.572 17.553c-4.276 0-7.742 3.78-7.742 8.442 0 4.663 3.466 9.803 7.742 9.803 4.275 0 7.741-5.14 7.741-9.803 0-4.662-3.466-8.442-7.741-8.442" fill="#FFF"/>
+              <path d="M32.615 25.818c0-3.281-1.254-4.273-2.04-5.263-.786-.99-2.04-1.673-2.04-1.673H21.64s-1.814 2.477-2.69 3.375c-.877.897-.726 3.722-.726 3.722l-.257 1.064c-.15 0-.183-.943-.317-2.5-.155-1.798.181-3.216.181-3.216l1.451-2.598-1.39.496 1.511-1.671-1.21.437 1.27-.863h-.967l1.451-.406-.967-.466s.846-.063 1.814-.186c.967-.124 1.693-.558 1.693-.558l-.847-.433 2.237.123-.665-.557 2.298.433-.847-.619 2.298.805-.605-.557 2.298 1.052-.363-.619 1.995 1.672-.241-1.668.665 1.984h.665l-.06.956.664.524 1.391-.124-.786 1.3 1.693.556-1.451.866 1.028 2.352-.484-.185-.03 2.708-.09.928-.636-1.191" fill="#FFF"/>
             </g>
-            <path d="M22.575 40.66c-.53-1.622.323-3.378 1.907-3.921 1.584-.544 3.299.33 3.83 1.951.531 1.622-.322 3.377-1.907 3.921-1.584.544-3.298-.33-3.83-1.951" fill="#FFF"/>
-            <path d="M23.672 34.21v3.507h.02c.008.801.794 1.423 1.764 1.423s1.757-.622 1.764-1.423h-.073V34.21h-3.475z" fill="#FFF"/>
-            <path fill="#FFF" d="M27.221 37.144l-3.53-1.445v-.813h3.53z"/>
-            <path d="M25.572 17.553c-4.276 0-7.742 3.78-7.742 8.442 0 4.663 3.466 9.803 7.742 9.803 4.275 0 7.741-5.14 7.741-9.803 0-4.662-3.466-8.442-7.741-8.442" fill="#FFF"/>
-            <path d="M32.615 25.818c0-3.281-1.254-4.273-2.04-5.263-.786-.99-2.04-1.673-2.04-1.673H21.64s-1.814 2.477-2.69 3.375c-.877.897-.726 3.722-.726 3.722l-.257 1.064c-.15 0-.183-.943-.317-2.5-.155-1.798.181-3.216.181-3.216l1.451-2.598-1.39.496 1.511-1.671-1.21.437 1.27-.863h-.967l1.451-.406-.967-.466s.846-.063 1.814-.186c.967-.124 1.693-.558 1.693-.558l-.847-.433 2.237.123-.665-.557 2.298.433-.847-.619 2.298.805-.605-.557 2.298 1.052-.363-.619 1.995 1.672-.241-1.668.665 1.984h.665l-.06.956.664.524 1.391-.124-.786 1.3 1.693.556-1.451.866 1.028 2.352-.484-.185-.03 2.708-.09.928-.636-1.191" fill="#FFF"/>
           </g>
-        </g>
-      </defs>
-      <use xlink:href="#spock"></use>
-    </svg>
-    <h1>TouchUp</h1>
-    <p>Et si on s’occupait un peu de votre carnet de contact ?</p>
-    <span class="call-to-action">En savoir plus</span>
-  </section>
-  <section class="analyze">
-    <div class="section__content">
+        </defs>
+        <use xlink:href="#spock"></use>
+      </svg>
+      <h1>TouchUp</h1>
+      <p>Et si on s’occupait un peu de votre carnet de contact ?</p>
+      <span class="call-to-action">En savoir plus</span>
+    </section>
+    <section data-name="analyze" class="analyze">
       <h2>Analysons votre carnet</h2>
       <p>Votre carnet de contact, il est dans quel état ? Super clean ? Ou des doublons, des clones et des contacts inutiles à perte de vue ? TouchUp vous dira tout !</p>
       <span class="call-to-action">Télécharger l’application</span>
-    </div>
-    <div class="section__phone"></div>
-  </section>
-  <section class="play">
-    <div class="section__content">
+    </section>
+    <section data-name="play" class="play">
       <h2>Jouons pour l’améliorer</h2>
       <p>Résoudre tous les soucis de votre carnet de contacts tout en vous amusant c’est désormais possible !</p>
       <span class="call-to-action">Télécharger l’application</span>
-    </div>
-    <div class="section__phone"></div>
-  </section>
-  <section class="keep">
-    <div class="section__content">
+    </section>
+    <section data-name="keep" class="keep">
       <h2>Garder le contrôle</h2>
       <p>C’est vous qui décidez ce que vous souhaitez garder ou non. Nous ne ferons jamais une action automatique sans vous l’avoir fait valider avant.</p>
       <span class="call-to-action">Télécharger l’application</span>
-    </div>
-    <div class="section__phone"></div>
-  </section>
-  <section class="be-afraid-of">
-    <div class="section__content">
+    </section>
+    <section data-name="be-afraid-of" class="be-afraid-of">
       <h2>Ne craignez plus les mauvaises manip’</h2>
       <p>Parce que nous savons que vos contacts sont précieux, vous pouvez récupérez toutes vos fiches contacts supprimés pendant 30 jours.</p>
       <span class="call-to-action">Télécharger l’application</span>
-    </div>
-    <div class="section__phone"></div>
-  </section>
-  <section class="forget">
-    <div class="section__content">
+    </section>
+    <section data-name="forget" class="forget">
       <h2>N’oubliez pas les anniversaires</h2>
       <p>On vous notifie à chaque anniversaire et vous pouvez directement écrire un message à l’élu(e) du jour.</p>
       <span class="call-to-action">Télécharger l’application</span>
-    </div>
-    <div class="section__phone"></div>
-  </section>
-  <section class="say">
-    <div class="section__content">
+    </section>
+    <section data-name="say" class="say">
       <svg width="155" height="55" viewBox="0 0 155 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <use xlink:href="#spock"></use>
       </svg>
@@ -161,8 +146,19 @@
           </g>
         </g>
       </svg>
+    </section>
+  </div><!--
+  --><div class="phone">
+    <div class="phone__mask">
+        <div class="phone__images">
+          <img srcset="images/ecran-01-niveau.png, images/ecran-01-niveau@2x.png 2x"/>
+          <img srcset="images/ecran-02-jeux.png, images/ecran-02-jeux@2x.png 2x"/>
+          <img srcset="images/ecran-03-fusions.png, images/ecran-03-fusions@2x.png 2x"/>
+          <img srcset="images/ecran-04-historique.png, images/ecran-04-historique@2x.png 2x"/>
+          <img srcset="images/ecran-05-anniv.png, images/ecran-05-anniv@2x.png 2x"/>
+        </div>
     </div>
-  </section>
+  </div>
   <script src="dist/app.min.js"></script>
 </body>
 </html>
