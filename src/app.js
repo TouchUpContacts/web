@@ -17,8 +17,13 @@
     let itemDataset = item.dataset;
     let slideContainer = touchUpApp.slideContainer;
     let slideContainerModifierClass = `slide-container--${itemDataset.step}`;
-    let previousSlide = document.querySelector(`.${itemDataset.previous}`);
     let slide = document.querySelector(`.${itemDataset.step}`);
+    const activeSlideClassName = touchUpApp.activeSlide.className;
+
+    if(slide == touchUpApp.activeSlide) {
+      return;
+    }
+
 
     touchUpApp.activeItem.classList.remove('item--active');
     item.classList.add('item--active');
@@ -26,15 +31,22 @@
 
     slideContainer.className = slideContainer.className.replace(slideContainerModifierRegExp, slideContainerModifierClass);
 
-    slide.classList.add(`${itemDataset.step}--active`);
-    slide.classList.remove(`${itemDataset.step}--leaved`);
+    let activeSlideActiveClass = (touchUpApp.activeSlide.classList.contains('enter-down')) ? 'enter-down' : 'enter-up';
+    let activeSlideNewClass = '';
 
-    if(previousSlide) {
-      const activeSlideClassRegExp = new RegExp(`${itemDataset.previous}--active`, 'g');
-      previousSlide.className = previousSlide.className.replace(activeSlideClassRegExp, `${itemDataset.previous}--leaved`);
+    if(touchUpApp.slides.indexOf(touchUpApp.activeSlide) < touchUpApp.slides.indexOf(slide)) { // slide up
+      slide.classList.add(`enter-up`);
+      activeSlideNewClass = `leaved-up`;
+    } else { // slide down
+      slide.classList.add(`enter-down`);
+      activeSlideNewClass = `leaved-down`;
     }
 
-    touchUpApp.activeSlide.classList.remove(`${touchUpApp.activeSlide.dataset.name}--active`);
+    touchUpApp.activeSlide.className = activeSlideClassName.replace(activeSlideActiveClass, activeSlideNewClass);
+
+    slide.classList.remove(`leaved-up`);
+    slide.classList.remove(`leaved-down`);
+
     touchUpApp.activeSlide = slide;
     touchUpApp.screensContainer.style.transform = `translate3d(0, -${(parseInt(itemDataset.screen) - 1) * 373}px, 0)`;
 

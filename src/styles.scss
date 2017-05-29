@@ -172,7 +172,7 @@ nav {
   width: calc(100vw - 240px);
 }
 
-.take-care-of {
+.take-care-of, .say {
   text-align: center;
   flex-direction: column;
 
@@ -181,11 +181,11 @@ nav {
     line-height: 58.5px;
   }
 
-  &--active {
+  &.enter-up, &.enter-down {
     transform: translate3d(0, -100vh, 0);
   }
 
-  &--leaved {
+  &.leaved-up, &.leaved-down {
     animation: fade-out .4s forwards;
   }
 }
@@ -197,7 +197,7 @@ nav {
 }
 
 .analyze, .play, .keep, .be-afraid-of, .forget {
-  &--active {
+  &.enter-up {
     opacity: 0;
     animation: enter .6s $easeOutCubic forwards, fade-in .8s forwards;
 
@@ -214,8 +214,32 @@ nav {
     }
   }
 
-  &--leaved {
+  &.enter-down {
+    opacity: 0;
+    transform: translate3d(0, -100vh, 0);
+    animation: fade-in 1s .2s forwards;
+  }
+
+  &.leaved-up {
     animation: fade-out .4s forwards;
+  }
+
+  &.leaved-down {
+    opacity: 1;
+    transform: translate3d(0, -100vh, 0);
+    animation: leave .8s .1s $easeOutCubic forwards, fade-out 1s forwards;
+
+    p {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      animation: leave-inner .8s $easeOutCubic forwards, fade-out .8s .2s forwards;
+    }
+
+    span {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      animation: leave-inner .6s $easeOutCubic forwards, fade-out .8s forwards;
+    }
   }
 }
 
@@ -270,6 +294,16 @@ nav {
   }
 }
 
+@keyframes leave {
+  from {
+    transform: translate3d(0, -100vh, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @keyframes enter-inner {
   from {
     transform: translate3d(0, 100px, 0);
@@ -277,5 +311,15 @@ nav {
 
   to {
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes leave-inner {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 100px, 0);
   }
 }
