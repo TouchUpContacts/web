@@ -7,6 +7,7 @@
     "move:assets": "cp -R images dist/",
     "build:css": "node-sass src/styles.scss dist/styles.css",
     "build:js": "cp src/app.js dist/ && uglifyjs dist/app.js -o dist/app.min.js --source-map dist/app.min.js.map --source-map-url app.min.js.map --source-map-root / -m -c --screw-ie8",
+    "postbuild:js": "cp src/*.min.js dist/",
     "prebuild": "rimraf dist && mkdir -p dist && npm run move:assets",
     "build": "concurrently \"npm run build:css\" \"npm run build:js\"",
     "watch:css": "chokidar 'src/**/*.scss' -c 'npm run build:css'",
