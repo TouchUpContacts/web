@@ -24,6 +24,14 @@
       return;
     }
 
+    if(item.classList.contains('screen-item') && !slide.parentElement.parentElement.classList.contains('screens-container--active')) {
+      slide.parentElement.parentElement.classList.add('screens-container--active');
+    }
+
+    if(touchUpApp.navItems.indexOf(item) === 0) {
+      document.querySelector('.screens-container').classList.remove('screens-container--active');
+    }
+
 
     touchUpApp.activeItem.classList.remove('item--active');
     item.classList.add('item--active');

@@ -37,41 +37,11 @@ nav {
     cursor: pointer;
     will-change: background-color;
     transition: background-color .4s;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .1);
 
     &:hover, &--active {
       background-color: #2c2c3b;
     }
-  }
-}
-
-.phone {
-  position: absolute;
-  top: 50%; right: 120px;
-  transform: translateY(-50%);
-  width: 250px;
-  height: 524px;
-  margin-left: 100px;
-  background: url("images/img-phone-empty@2x.png") no-repeat;
-  background-size: contain;
-  opacity: 0;
-  transition: opacity .4s;
-
-  &__mask {
-    position: absolute;
-    width: 210px; height: 373px;
-    top: 77px; left: 21px;
-    overflow: hidden;
-  }
-
-  &__images {
-    height: calc(7 * 373px);
-    transition: transform 1s;
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    height: 373px;
   }
 }
 
@@ -85,7 +55,60 @@ nav {
   width: 100vw; height: 100vh;
   overflow: hidden;
 
-  &--analyze, &--keep, &--forget {
+  .screens-container {
+    width: 100vw;
+    will-change: top;
+    transition: top .4s, background-color .4s;
+    padding-left: 10%;
+
+    .screens {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .phone {
+      position: absolute;
+      top: 50%; right: 10%;
+      transform: translateY(-50%);
+      width: 250px;
+      height: 524px;
+      margin-left: 100px;
+      background: url("images/img-phone-empty@2x.png") no-repeat;
+      background-size: contain;
+      opacity: 0;
+      transition: opacity .4s;
+
+      &__mask {
+        position: absolute;
+        width: 210px; height: 373px;
+        top: 77px; left: 21px;
+        overflow: hidden;
+      }
+
+      &__images {
+        height: calc(7 * 373px);
+        transition: transform 1s;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 373px;
+      }
+    }
+
+    &--active {
+      top: 0;
+
+      .phone {
+        opacity: 1;
+      }
+    }
+
+  }
+
+  &--analyze .screens-container, &--keep .screens-container, &--forget .screens-container {
     background-color: #f0f5f8;
   }
 
@@ -102,11 +125,11 @@ nav {
     }
   }
 
-  &--play {
+  &--play .screens-container {
     background-color: #1a509c;
   }
 
-  &--be-afraid-of {
+  &--be-afraid-of .screens-container {
     background-color: #25c6da;
   }
 
@@ -124,7 +147,6 @@ nav {
 .section-container {
   height: 100vh;
   text-align: center;
-  margin: 0 120px;
 
   section {
     height: 100vh;
@@ -135,6 +157,7 @@ nav {
     position: absolute;
     top: 100vh;
     z-index: 0;
+    will-change: top;
   }
 
   .analyze, .play, .keep, .be-afraid-of, .forget {
@@ -170,6 +193,7 @@ nav {
 
 .take-care-of, .say {
   width: calc(100vw - 240px);
+  margin: 0 120px;
 }
 
 .take-care-of, .say {

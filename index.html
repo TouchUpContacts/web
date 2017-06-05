@@ -8,10 +8,10 @@
 <body class="slide-container slide-container--take-care-of">
   <nav>
     <li data-step="take-care-of" class="item item--active">&nbsp;</li>
-    <li data-step="analyze" data-screen="1" data-previous="take-care-of" class="item">&nbsp;</li>
-    <li data-step="play" data-screen="2" data-previous="analyze" class="item">&nbsp;</li>
-    <li data-step="keep" data-screen="3" data-previous="play" class="item">&nbsp;</li>
-    <li data-step="be-afraid-of" data-screen="4" data-previous="keep" class="item">&nbsp;</li>
+    <li data-step="analyze" data-screen="1" data-previous="take-care-of" class="item screen-item">&nbsp;</li>
+    <li data-step="play" data-screen="2" data-previous="analyze" class="item screen-item">&nbsp;</li>
+    <li data-step="keep" data-screen="3" data-previous="play" class="item screen-item">&nbsp;</li>
+    <li data-step="be-afraid-of" data-screen="4" data-previous="keep" class="item screen-item">&nbsp;</li>
     <li data-step="forget" data-screen="5" data-previous="be-afraid-of" class="item">&nbsp;</li>
     <li data-step="say" data-previous="forget" class="item">&nbsp;</li>
   </nav>
@@ -21,30 +21,45 @@
       <p>Et si on s’occupait un peu de votre carnet de contact ?</p>
       <span class="call-to-action">En savoir plus</span>
     </section>
-    <section data-name="analyze" class="analyze">
-      <h2>Analysons votre carnet</h2>
-      <p>Votre carnet de contact, il est dans quel état ? Super clean ? Ou des doublons, des clones et des contacts inutiles à perte de vue ? TouchUp vous dira tout !</p>
-      <span class="call-to-action">Télécharger l’application</span>
-    </section>
-    <section data-name="play" class="play">
-      <h2>Jouons pour l’améliorer</h2>
-      <p>Résoudre tous les soucis de votre carnet de contacts tout en vous amusant c’est désormais possible !</p>
-      <span class="call-to-action">Télécharger l’application</span>
-    </section>
-    <section data-name="keep" class="keep">
-      <h2>Garder le contrôle</h2>
-      <p>C’est vous qui décidez ce que vous souhaitez garder ou non. Nous ne ferons jamais une action automatique sans vous l’avoir fait valider avant.</p>
-      <span class="call-to-action">Télécharger l’application</span>
-    </section>
-    <section data-name="be-afraid-of" class="be-afraid-of">
-      <h2>Ne craignez plus les mauvaises manip’</h2>
-      <p>Parce que nous savons que vos contacts sont précieux, vous pouvez récupérez toutes vos fiches contacts supprimés pendant 30 jours.</p>
-      <span class="call-to-action">Télécharger l’application</span>
-    </section>
-    <section data-name="forget" class="forget">
-      <h2>N’oubliez pas les anniversaires</h2>
-      <p>On vous notifie à chaque anniversaire et vous pouvez directement écrire un message à l’élu(e) du jour.</p>
-      <span class="call-to-action">Télécharger l’application</span>
+    <section class="screens-container">
+      <div class="screens">
+        <section data-name="analyze" class="analyze">
+          <h2>Analysons votre carnet</h2>
+          <p>Votre carnet de contact, il est dans quel état ? Super clean ? Ou des doublons, des clones et des contacts inutiles à perte de vue ? TouchUp vous dira tout !</p>
+          <span class="call-to-action">Télécharger l’application</span>
+        </section>
+        <section data-name="play" class="play">
+          <h2>Jouons pour l’améliorer</h2>
+          <p>Résoudre tous les soucis de votre carnet de contacts tout en vous amusant c’est désormais possible !</p>
+          <span class="call-to-action">Télécharger l’application</span>
+        </section>
+        <section data-name="keep" class="keep">
+          <h2>Garder le contrôle</h2>
+          <p>C’est vous qui décidez ce que vous souhaitez garder ou non. Nous ne ferons jamais une action automatique sans vous l’avoir fait valider avant.</p>
+          <span class="call-to-action">Télécharger l’application</span>
+        </section>
+        <section data-name="be-afraid-of" class="be-afraid-of">
+          <h2>Ne craignez plus les mauvaises manip’</h2>
+          <p>Parce que nous savons que vos contacts sont précieux, vous pouvez récupérez toutes vos fiches contacts supprimés pendant 30 jours.</p>
+          <span class="call-to-action">Télécharger l’application</span>
+        </section>
+        <section data-name="forget" class="forget">
+          <h2>N’oubliez pas les anniversaires</h2>
+          <p>On vous notifie à chaque anniversaire et vous pouvez directement écrire un message à l’élu(e) du jour.</p>
+          <span class="call-to-action">Télécharger l’application</span>
+        </section>
+      </div><!--
+      --><div class="phone">
+      <div class="phone__mask">
+        <div class="phone__images">
+          <img srcset="images/ecran-01-niveau.png, images/ecran-01-niveau@2x.png 2x"/>
+          <img srcset="images/ecran-02-jeux.png, images/ecran-02-jeux@2x.png 2x"/>
+          <img srcset="images/ecran-03-fusions.png, images/ecran-03-fusions@2x.png 2x"/>
+          <img srcset="images/ecran-04-historique.png, images/ecran-04-historique@2x.png 2x"/>
+          <img srcset="images/ecran-05-anniv.png, images/ecran-05-anniv@2x.png 2x"/>
+        </div>
+      </div>
+    </div>
     </section>
     <section data-name="say" class="say">
       <svg width="155" height="55" viewBox="0 0 155 55" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -54,17 +69,6 @@
       <span class="call-to-action">Allé, testez l’appli</span>
       <div id="spock"></div>
     </section>
-  </div><!--
-  --><div class="phone">
-    <div class="phone__mask">
-        <div class="phone__images">
-          <img srcset="images/ecran-01-niveau.png, images/ecran-01-niveau@2x.png 2x"/>
-          <img srcset="images/ecran-02-jeux.png, images/ecran-02-jeux@2x.png 2x"/>
-          <img srcset="images/ecran-03-fusions.png, images/ecran-03-fusions@2x.png 2x"/>
-          <img srcset="images/ecran-04-historique.png, images/ecran-04-historique@2x.png 2x"/>
-          <img srcset="images/ecran-05-anniv.png, images/ecran-05-anniv@2x.png 2x"/>
-        </div>
-    </div>
   </div>
   <script src="dist/bodymovin.light.min.js"></script>
   <script src="dist/app.min.js"></script>
