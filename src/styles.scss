@@ -58,12 +58,12 @@ nav {
     width: 100vw;
     will-change: top;
     transition: top .4s, background-color .4s;
-    padding-left: 10%;
 
     .screens {
       display: flex;
       width: 100%;
       height: 100%;
+      max-width: 980px;
     }
 
     .phone {
@@ -149,7 +149,7 @@ nav {
   }
 
   .screens > section {
-    max-width: 450px;
+    max-width: 50%;
   }
 
   h2 {
@@ -276,6 +276,11 @@ nav {
     background-color: #25c6da;
     box-shadow: 0 2px 0 rgba(66, 162, 179, 1);
   }
+
+  & > div {
+    height: 286px;
+    margin: auto auto 0 auto;
+  }
 }
 
 .section-container .say {
@@ -288,6 +293,14 @@ nav {
   }
 }
 
+@media all and (max-width: 1069px) {
+  .section-container {
+    .screens > section {
+      padding-left: 10%;
+    }
+  }
+}
+
 @media all and (max-width: 899px) {
   .section-container {
 
@@ -295,6 +308,7 @@ nav {
       justify-content: flex-start;
       max-width: calc(100vw - 20%);
       padding-top: 2%;
+      padding-left: 0;
     }
 
     .screens-container {
