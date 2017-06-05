@@ -11,6 +11,7 @@
   touchUpApp.activeSlide = touchUpApp.slides[0];
   touchUpApp.screensContainer = document.querySelector('.phone__images');
   touchUpApp.activeScreenOffset = 0;
+  touchUpApp.wheelTimeout = null;
 
   itemClickEventHandler = (e) => {
     let item = e.currentTarget;
@@ -62,6 +63,24 @@
 
   touchUpApp.navItems.forEach((item) => {
     item.addEventListener('click', itemClickEventHandler);
+  });
+
+  window.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    clearTimeout(touchUpApp.wheelTimeout);
+
+    touchUpApp.wheelTimeout = setTimeout(() => {
+      let itemIndex = touchUpApp.navItems.indexOf(touchUpApp.activeItem);
+      if (e.deltaY > 0 && itemIndex < touchUpApp.navItems.length - 1) { // forward
+        touchUpApp.navItems[itemIndex+1].click();
+      }
+
+      if (e.deltaY < 0 && itemIndex > 0) { // backward
+        touchUpApp.navItems[itemIndex-1].click();
+      }
+    }, 40);
+
+    return false;
   });
 
   window.TouchUpApp = window.TouchUpApp || Object.create(touchUpApp);
