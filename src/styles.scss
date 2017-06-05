@@ -51,7 +51,6 @@ nav {
   font-size: 20px;
   line-height: 26px;
   font-family: 'Open Sans', sans-serif;
-  transition: background-color .4s;
   width: 100vw; height: 100vh;
   overflow: hidden;
 
@@ -118,23 +117,12 @@ nav {
     }
   }
 
-  &--take-care-of {
-    background-color: #48c8bc;
-    .section-container {
-      margin-right: 120px;
-    }
-  }
-
   &--play .screens-container {
     background-color: #1a509c;
   }
 
   &--be-afraid-of .screens-container {
     background-color: #25c6da;
-  }
-
-  &--say {
-    background-color: #3f3f54;
   }
 
 }
@@ -189,11 +177,10 @@ nav {
 
 }
 
-/*** Take care of ***/
-
 .take-care-of, .say {
-  width: calc(100vw - 20%);
-  margin: 0 10%;
+  width: 100vw;
+  padding: 0 10%;
+  transition: transform .4s;
 }
 
 .take-care-of, .say {
@@ -204,14 +191,13 @@ nav {
     font-size: 45px;
     line-height: 58.5px;
   }
+}
 
-  &.enter-up, &.enter-down {
-    transform: translate3d(0, -100vh, 0);
-  }
-
-  &.leaved-up, &.leaved-down {
-    animation: fade-out .4s forwards;
-  }
+/*** Take care of ***/
+.section-container .take-care-of {
+  background-color: #48c8bc;
+  transform: translate3d(0, 0, 0);
+  top: 0;
 }
 
 /*** Analyze ***/
@@ -276,7 +262,11 @@ nav {
   box-shadow: 0 2px 0 rgba(24, 25, 33, 1);
 }
 
+/*** Say ***/
+
 .say {
+  background-color: #3f3f54;
+
   p {
     font-size: 45px;
     line-height: 62px;
@@ -285,6 +275,16 @@ nav {
   .call-to-action {
     background-color: #25c6da;
     box-shadow: 0 2px 0 rgba(66, 162, 179, 1);
+  }
+}
+
+.section-container .say {
+  &.enter-up {
+    transform: translate3d(0, -100vh, 0);
+  }
+
+  &.leaved-up {
+    transform: translate3d(0, 0, 0);
   }
 }
 
