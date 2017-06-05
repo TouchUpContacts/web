@@ -6,13 +6,14 @@
   "scripts": {
     "move:assets": "cp -R images dist/",
     "build:css": "node-sass src/styles.scss dist/styles.css",
-    "build:js": "cp src/app.js dist/ && uglifyjs dist/app.js -o dist/app.min.js --source-map dist/app.min.js.map --source-map-url app.min.js.map --source-map-root / -m -c --screw-ie8",
+    "build:js": "cp src/app.js dist/ && uglifyjs dist/app.js -o dist/app-\"$APPREV\".min.js --source-map dist/app-\"$APPREV\".min.js.map --source-map-url app-\"$APPREV\".min.js.map --source-map-root / -m -c --screw-ie8",
+    "inject:js": "export APPREV=$(date +\"%Y%m%d%H%M%S\") && npm run build:js && sed -e \"s/<!-- inject:js -->/app-$APPREV.min.js/\" index.html > dist/index.html",
     "postbuild:js": "cp src/*.min.js dist/",
     "prebuild": "rimraf dist && mkdir -p dist && npm run move:assets",
-    "build": "concurrently \"npm run build:css\" \"npm run build:js\"",
+    "build": "concurrently \"npm run build:css\" \"npm run inject:js\"",
     "watch:css": "chokidar 'src/**/*.scss' -c 'npm run build:css'",
-    "watch:js": "chokidar 'src/*.js' -c 'npm run build:js'",
-    "watch": "npm run build && concurrently \"lite-server .\" \"npm run watch:css\" \"npm run watch:js\"",
+    "watch:js": "chokidar 'src/*.js' -c 'npm run inject:js'",
+    "watch": "npm run build && concurrently \"lite-server dist\" \"npm run watch:css\" \"npm run watch:js\"",
     "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
