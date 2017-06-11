@@ -39,8 +39,27 @@ nav {
     transition: background-color .4s;
     box-shadow: 0 0 1px rgba(0, 0, 0, .1);
 
-    &:hover, &--active {
+    &--active {
       background-color: #2c2c3b;
+    }
+  }
+
+  @media all and (min-width: 1025px) {
+    .item {
+      &:hover {
+        background-color: #2c2c3b;
+      }
+    }
+  }
+
+  @media all and (max-width: 899px) {
+    width: 20px;
+
+    .item {
+      width: 15px;
+      height: 15px;
+      margin-bottom: 30px;
+      border-radius: 15px;
     }
   }
 }
