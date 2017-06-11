@@ -13,7 +13,8 @@
     "build": "concurrently \"npm run build:css\" \"npm run inject:js\"",
     "watch:css": "chokidar 'src/**/*.scss' -c 'npm run build:css'",
     "watch:js": "chokidar 'src/*.js' -c 'npm run inject:js'",
-    "watch": "npm run build && concurrently \"lite-server dist\" \"npm run watch:css\" \"npm run watch:js\"",
+    "watch:html": "chokidar '*.html' -c 'npm run inject:js'",
+    "watch": "npm run build && concurrently \"lite-server dist\" \"npm run watch:html\" \"npm run watch:css\" \"npm run watch:js\"",
     "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
