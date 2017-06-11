@@ -12,6 +12,42 @@
   touchUpApp.screensContainer = document.querySelector('.phone__images');
   touchUpApp.activeScreenOffset = 0;
   touchUpApp.wheelTimeout = null;
+  touchUpApp.touchStartY = 0;
+  touchUpApp.activeItemIndex = 0;
+
+  if('ontouchstart' in document.documentElement) {
+    document.body.addEventListener('touchstart', (e) => {
+      touchUpApp.touchStartY = e.touches[0].clientY;
+      clearTimeout(touchUpApp.wheelTimeout);
+    });
+
+    document.body.addEventListener('touchmove', (e) => {
+      e.preventDefault();
+      return false;
+    });
+
+    document.body.addEventListener('touchend', (e) => {
+      clearTimeout(touchUpApp.wheelTimeout);
+
+      if(e.changedTouches[0].target.classList.contains('item')) {
+        return false;
+      }
+
+      touchUpApp.wheelTimeout = setTimeout(() => {
+
+        let itemIndex = touchUpApp.activeItemIndex;
+        let touchMoveDirection = (touchUpApp.touchStartY - e.changedTouches[0].clientY > 0) ? 'down' : 'up';
+
+        if(touchMoveDirection === 'down' && touchUpApp.activeItemIndex < touchUpApp.navItems.length - 1) {
+          touchUpApp.navItems[itemIndex+1].click();
+        }
+
+        if (touchMoveDirection === 'up' && itemIndex > 0) { // backward
+          touchUpApp.navItems[itemIndex-1].click();
+        }
+      }, 40);
+    });
+  }
 
   itemClickEventHandler = (e) => {
     let item = e.currentTarget;
@@ -37,6 +73,7 @@
     touchUpApp.activeItem.classList.remove('item--active');
     item.classList.add('item--active');
     touchUpApp.activeItem = item;
+    touchUpApp.activeItemIndex = touchUpApp.navItems.indexOf(touchUpApp.activeItem);
 
     slideContainer.className = slideContainer.className.replace(slideContainerModifierRegExp, slideContainerModifierClass);
 
@@ -65,23 +102,25 @@
     item.addEventListener('click', itemClickEventHandler);
   });
 
-  window.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    clearTimeout(touchUpApp.wheelTimeout);
+  if(!'ontouchstart' in document.documentElement) {
+    window.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      clearTimeout(touchUpApp.wheelTimeout);
 
-    touchUpApp.wheelTimeout = setTimeout(() => {
-      let itemIndex = touchUpApp.navItems.indexOf(touchUpApp.activeItem);
-      if (e.deltaY > 0 && itemIndex < touchUpApp.navItems.length - 1) { // forward
-        touchUpApp.navItems[itemIndex+1].click();
-      }
+      touchUpApp.wheelTimeout = setTimeout(() => {
+        let itemIndex = touchUpApp.activeItemIndex;
+        if (e.deltaY > 0 && itemIndex < touchUpApp.navItems.length - 1) { // forward
+          touchUpApp.navItems[itemIndex+1].click();
+        }
 
-      if (e.deltaY < 0 && itemIndex > 0) { // backward
-        touchUpApp.navItems[itemIndex-1].click();
-      }
-    }, 40);
+        if (e.deltaY < 0 && itemIndex > 0) { // backward
+          touchUpApp.navItems[itemIndex-1].click();
+        }
+      }, 40);
 
-    return false;
-  });
+      return false;
+    });
+  }
 
   window.TouchUpApp = window.TouchUpApp || Object.create(touchUpApp);
 }());
