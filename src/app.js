@@ -102,25 +102,24 @@
     item.addEventListener('click', itemClickEventHandler);
   });
 
-  if(!'ontouchstart' in document.documentElement) {
-    window.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      clearTimeout(touchUpApp.wheelTimeout);
 
-      touchUpApp.wheelTimeout = setTimeout(() => {
-        let itemIndex = touchUpApp.activeItemIndex;
-        if (e.deltaY > 0 && itemIndex < touchUpApp.navItems.length - 1) { // forward
-          touchUpApp.navItems[itemIndex+1].click();
-        }
+  window.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    clearTimeout(touchUpApp.wheelTimeout);
 
-        if (e.deltaY < 0 && itemIndex > 0) { // backward
-          touchUpApp.navItems[itemIndex-1].click();
-        }
-      }, 40);
+    touchUpApp.wheelTimeout = setTimeout(() => {
+      let itemIndex = touchUpApp.activeItemIndex;
+      if (e.deltaY > 0 && itemIndex < touchUpApp.navItems.length - 1) { // forward
+        touchUpApp.navItems[itemIndex+1].click();
+      }
 
-      return false;
-    });
-  }
+      if (e.deltaY < 0 && itemIndex > 0) { // backward
+        touchUpApp.navItems[itemIndex-1].click();
+      }
+    }, 40);
+
+    return false;
+  });
 
   window.TouchUpApp = window.TouchUpApp || Object.create(touchUpApp);
 }());
