@@ -7,65 +7,87 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=id1128944336">
 </head>
-<body class="slide-container slide-container--take-care-of">
-  <nav>
-    <li data-step="take-care-of" class="item item--active">&nbsp;</li>
-    <li data-step="analyze" data-screen="1" data-previous="take-care-of" class="item screen-item">&nbsp;</li>
-    <li data-step="play" data-screen="2" data-previous="analyze" class="item screen-item">&nbsp;</li>
-    <li data-step="keep" data-screen="3" data-previous="play" class="item screen-item">&nbsp;</li>
-    <li data-step="be-afraid-of" data-screen="4" data-previous="keep" class="item screen-item">&nbsp;</li>
-    <li data-step="forget" data-screen="5" data-previous="be-afraid-of" class="item screen-item">&nbsp;</li>
-    <li data-step="say" data-previous="forget" class="item">&nbsp;</li>
-  </nav>
-  <div class="section-container">
-    <section data-name="take-care-of" class="take-care-of enter-up">
-      <div id="touch-up-logo"></div>
-      <p>Et si on s’occupait un peu de votre carnet de contact ?</p>
-      <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">En savoir plus</a>
+<body class="slide-container">
+  <div class="sections-container">
+    <section class="take-care-of">
+      <div id="first-touch-up-logo"></div>
+      <p>Et si on s’occupait de votre carnet de contact ?</p>
+      <svg width="30" height="30" id="arrow-down" viewBox="0 0 30 30"><g fill="#FFF" fill-rule="evenodd"><path d="M25.156 9l2.357 2.357-12.156 12.155-2.356-2.357z"/><path d="M3 11.357L5.357 9l12.155 12.155-2.357 2.357z"/></g></svg>
     </section>
-    <section class="screens-container">
-      <div class="screens">
-        <section data-name="analyze" class="analyze">
-          <h2>Analysons votre carnet</h2>
-          <p>Votre carnet de contact, il est dans quel état ? Super clean ? Ou des doublons, des clones et des contacts inutiles à perte de vue ? TouchUp vous dira tout !</p>
-          <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Télécharger l’application</a>
-        </section>
-        <section data-name="play" class="play">
-          <h2>Jouons pour l’améliorer</h2>
-          <p>Résoudre tous les soucis de votre carnet de contacts tout en vous amusant c’est désormais possible !</p>
-          <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Télécharger l’application</a>
-        </section>
-        <section data-name="keep" class="keep">
-          <h2>Garder le contrôle</h2>
-          <p>C’est vous qui décidez ce que vous souhaitez garder ou non. Nous ne ferons jamais une action automatique sans vous l’avoir fait valider avant.</p>
-          <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Télécharger l’application</a>
-        </section>
-        <section data-name="be-afraid-of" class="be-afraid-of">
-          <h2>Ne craignez plus les mauvaises manip’</h2>
-          <p>Parce que nous savons que vos contacts sont précieux, vous pouvez récupérez toutes vos fiches contacts supprimés pendant 30 jours.</p>
-          <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Télécharger l’application</a>
-        </section>
-        <section data-name="forget" class="forget">
-          <h2>N’oubliez pas les anniversaires</h2>
-          <p>On vous notifie à chaque anniversaire et vous pouvez directement écrire un message à l’élu(e) du jour.</p>
-          <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Télécharger l’application</a>
-        </section>
-      </div><!--
-      --><div class="phone">
-      <div class="phone__mask">
-        <div class="phone__images">
-          <img srcset="images/ecran-01-niveau.png, images/ecran-01-niveau@2x.png 2x"/>
-          <img srcset="images/ecran-02-jeux.png, images/ecran-02-jeux@2x.png 2x"/>
-          <img srcset="images/ecran-03-fusions.png, images/ecran-03-fusions@2x.png 2x"/>
-          <img srcset="images/ecran-04-historique.png, images/ecran-04-historique@2x.png 2x"/>
-          <img srcset="images/ecran-05-anniv.png, images/ecran-05-anniv@2x.png 2x"/>
+    <section class="analyze">
+      <article>
+        <h2>Analysons votre carnet</h2>
+        <p>Votre carnet de contact, il est dans quel état ? Super clean ? Ou des doublons, des clones et des contacts inutiles à perte de vue ? TouchUp vous dira tout !</p>
+        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Analysez-moi le carnet !</a>
+      </article>
+      <div class="phone-clip-container">
+        <div class="phone-clip">
+          <img class="phone-border" srcset="images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png"  width="250" height="530"/>
+          <img class="phone-screen" srcset="images/ecran-01-niveau.png, images/ecran-01-niveau@2x.png 2x" width="210" height="373"/>
         </div>
       </div>
-    </div>
     </section>
-    <section data-name="say" class="say">
+    <section class="play">
+      <article>
+        <h2>Jouons pour l’améliorer</h2>
+        <p>Résoudre tous les soucis de votre carnet de contacts tout en vous amusant c’est désormais possible !</p>
+        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Je veux jouer</a>
+      </article>
+      <div class="phone-clip-container">
+        <div class="phone-clip">
+          <img class="phone-border" srcset="images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png"  width="250" height="530"/>
+          <img class="phone-screen" srcset="images/ecran-02-jeux.png, images/ecran-02-jeux@2x.png 2x" width="210" height="373"/>
+        </div>
+      </div>
+    </section>
+    <section class="keep">
+      <article>
+        <h2>Gardez le contrôle</h2>
+        <p>C’est vous qui décidez ce que vous souhaitez garder ou non. Nous ne ferons jamais une action automatique sans vous l’avoir fait valider avant.</p>
+        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Je veux voir ça !</a>
+      </article>
+      <div class="phone-clip-container">
+        <div class="phone-clip">
+          <img class="phone-border" srcset="images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png"  width="250" height="530"/>
+          <img class="phone-screen" srcset="images/ecran-03-fusions.png, images/ecran-03-fusions@2x.png 2x" width="210" height="373"/>
+        </div>
+      </div>
+    </section>
+    <section class="be-afraid-of">
+      <article>
+        <h2>Récupérez vos contacts supprimés</h2>
+        <p>Parce que nous savons que vos contacts sont précieux, vous pouvez récupérez à tout moment vos fiches supprimées !</p>
+        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Rassurez-moi encore !</a>
+      </article>
+      <div class="phone-clip-container">
+        <div class="phone-clip">
+          <img class="phone-border" srcset="images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png"  width="250" height="530"/>
+          <img class="phone-screen" srcset="images/ecran-04-historique.png, images/ecran-04-historique@2x.png 2x" width="210" height="373"/>
+        </div>
+      </div>
+    </section>
+    <section class="forget">
+      <article>
+        <h2>N’oubliez pas les anniversaires</h2>
+        <p>On vous notifie à chaque anniversaire et vous pouvez directement écrire un message à l’élu(e) du jour.</p>
+        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Ho oui, notifiez-moi</a>
+      </article>
+      <div class="phone-clip-container">
+        <div class="phone-clip">
+          <img class="phone-border" srcset="images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png"  width="250" height="530"/>
+          <img class="phone-screen" srcset="images/ecran-05-anniv.png, images/ecran-05-anniv@2x.png 2x" width="210" height="373"/>
+        </div>
+      </div>
+    </section>
+    <section class="say">
+      <div id="second-touch-up-logo"></div>
       <p>Vos contacts vous diront Merci !</p>
       <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Allé, testez l’appli</a>
+      <div class="social-links">
+        <svg width="40" height="40" viewBox="0 0 30 30"><path d="M16.25 25V15H20v-2.5h-3.75V10c.24-.975.516-1.678 2.5-1.25H20V5c-.312.093-1.39 0-2.5 0-2.757 0-4.54 1.66-5 5v2.5H10V15h2.5v10h3.75z" fill="#FFF" fill-rule="evenodd"/></svg>
+        <svg width="40" height="40" viewBox="0 0 30 30"><g fill="#FFF" fill-rule="evenodd"><path d="M10.668 2l-.902 3.772h-.092L8.73 2H7.26l1.734 5.696v3.74h1.457V7.52L12.148 2zM12.606 4.777c.348-.318.816-.479 1.404-.479.535 0 .975.17 1.317.506.342.336.51.77.51 1.301V9.7c0 .598-.167 1.064-.501 1.404-.335.338-.798.508-1.384.508-.567 0-1.022-.175-1.36-.525-.34-.35-.51-.82-.51-1.412l-.001-3.609c0-.538.175-.968.525-1.288zm.947 5.472a.502.502 0 0 0 .395.156.56.56 0 0 0 .418-.16c.103-.107.154-.253.154-.44V6.012a.474.474 0 0 0-.16-.369.6.6 0 0 0-.412-.138.54.54 0 0 0-.385.138.482.482 0 0 0-.148.37v3.79c0 .192.045.34.138.445zM19.336 4.475v5.283a1.816 1.816 0 0 1-.398.375c-.147.098-.268.147-.362.147-.123 0-.209-.036-.263-.111-.055-.073-.082-.192-.082-.358V4.475h-1.293v5.818c0 .414.074.725.226.933.152.206.377.31.676.31.244 0 .494-.075.752-.222a2.83 2.83 0 0 0 .744-.647v.769h1.295V4.475h-1.295zM20 20.588h1v-1h-1zM16 23.588h1v-4h-1z"/><path d="M22 19.588v2h-2v2h1v-1h1v2h-3v-6h3v1zm-4 0v5h-3v-8h1v2h2v1zm-4 5h-3v-6h1v5h1v-5h1v6zm-4 0H9v-7H7v-1h5v1h-2v7zm15.188-8.18c0-1.68-1.379-2.861-3.08-2.861-2.307-.096-4.665.04-7.067.04h-.752c-2.402 0-4.76-.136-7.066-.04-1.702 0-3.078 1.27-3.078 2.953A48.257 48.257 0 0 0 4 20.448c-.004 1.332.041 2.64.145 3.974 0 1.68 1.376 3.03 3.078 3.03 2.425.105 4.91.142 7.443.138 2.531.004 5.014-.042 7.441-.146 1.702 0 3.081-1.364 3.081-3.044.101-1.333.144-2.665.142-3.997a51.803 51.803 0 0 0-.142-3.995z"/></g></svg>
+        <svg width="40" height="40" viewBox="0 0 30 30"><path d="M20.132 9.483l-.775 7.177c-.058.505-.086.988-.086 1.451 0 .69.226 1.031.678 1.031.723 0 1.415-.54 2.08-1.624.664-1.083.992-2.398.992-3.937 0-2.224-.732-4.039-2.204-5.426-1.474-1.394-3.255-2.088-5.354-2.088-2.3 0-4.237.862-5.801 2.587-1.569 1.725-2.349 3.848-2.349 6.378 0 2.36.737 4.41 2.206 6.151 1.473 1.74 3.538 2.614 6.2 2.614 2.07 0 4.18-.605 6.33-1.82l.833 2.098C20.582 25.36 18.188 26 15.72 26c-3.284 0-5.888-1.083-7.823-3.244C5.967 20.596 5 18.014 5 15.018c0-3.133 1.016-5.752 3.047-7.855C10.077 5.051 12.532 4 15.406 4c2.71 0 4.987.909 6.826 2.718C24.076 8.532 25 10.818 25 13.579c0 2.003-.52 3.791-1.555 5.357-1.035 1.562-2.292 2.345-3.779 2.345-1.155 0-1.954-.53-2.397-1.597-.81 1.108-1.795 1.66-2.96 1.66-1.194 0-2.22-.54-3.068-1.634-.852-1.088-1.275-2.518-1.275-4.295 0-1.83.477-3.312 1.435-4.458.963-1.146 2.104-1.72 3.427-1.72 1.281 0 2.2.442 2.764 1.325l.115-1.078h2.425v-.001zm-5.64 9.354c.75 0 1.428-.4 2.035-1.2.607-.794.91-1.829.91-3.102 0-.72-.23-1.36-.698-1.935-.462-.567-1.035-.851-1.713-.851-.732 0-1.338.352-1.82 1.056-.476.7-.716 1.614-.716 2.735 0 .95.183 1.74.558 2.36.37.621.851.937 1.443.937z" fill="#FFF" fill-rule="evenodd"/></svg>
+      </div>
       <div id="spock"></div>
     </section>
   </div>
