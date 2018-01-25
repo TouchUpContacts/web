@@ -18,7 +18,7 @@ body, html {
 body {
   background-color: #48c8bc;
   color: #FFFFFF;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 26px;
   font-family: 'Open Sans', sans-serif;
   width: 100vw;
@@ -42,7 +42,7 @@ body {
     flex-direction: row;
     z-index: 0;
     padding: 0 120px;
-    min-height: 700px;
+    min-height: 95vh;
     max-width: 100vw;
     overflow-x: hidden;
   }
@@ -51,11 +51,11 @@ body {
     text-align: center;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
 
-    p {
+    h1 {
       font-size: 45px;
       line-height: 58.5px;
+      font-weight: normal;
     }
   }
 
@@ -90,6 +90,7 @@ body {
 
   .say {
     justify-content: flex-end;
+    min-height: 100vh;
   }
 
   article, .phone-clip-container {
@@ -169,7 +170,7 @@ body {
 
 /*** Take care of ***/
 .take-care-of {
-  background-color: #48c8bc;
+  background-color: #20C7B6;
 }
 
 #arrow-down {
@@ -321,6 +322,10 @@ footer {
 
 @media all and (max-width: 870px) {
 
+  body {
+    font-size: 15px;
+  }
+
   #arrow-down {
     margin-bottom: 100px;
   }
@@ -353,6 +358,7 @@ footer {
     }
 
     h2 {
+      font-size: 30px;
       margin-top: 35px;
       &::before {
         display: none;
