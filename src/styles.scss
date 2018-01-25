@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:300,400,700');
 
 $easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
 
@@ -28,7 +28,14 @@ body {
 .sections-container {
   text-align: center;
 
-  section {
+  .touchup-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    position: relative;
+    top: -48px;
+  }
+
+  & > section {
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -294,6 +301,13 @@ footer {
   }
 
   .sections-container {
+
+    .take-care-of {
+      h1 {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
 
     section {
       flex-direction: column;
