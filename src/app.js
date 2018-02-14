@@ -3,6 +3,38 @@
 
   let touchUpApp = {};
 
+  const phoneBorderElements = Array.from(document.getElementsByClassName('phone-border'));
+  const phoneScreenElements = Array.from(document.getElementsByClassName('phone-screen'));
+
+  function resizeHandler() {
+    if(window.innerWidth < 1100) {
+      if(phoneBorderElements[0].hasAttribute('style')) {
+        phoneBorderElements.forEach((phoneBorderElement) => {
+          phoneBorderElement.removeAttribute('style');
+        });
+        phoneScreenElements.forEach((phoneScreenElement) => {
+          phoneScreenElement.removeAttribute('style');
+        });
+      }
+      return;
+    }
+    let delta = (phoneBorderElements[0].getBoundingClientRect().left - phoneBorderElements[0].parentElement.getBoundingClientRect().left) - 16;
+    if(delta < 0) delta = 0;
+
+    phoneBorderElements.forEach((phoneBorderElement) => {
+      phoneBorderElement.style.right = (parseInt(phoneBorderElement.style.right.replace('px', '')||124) + delta) + 'px';
+    });
+
+    phoneScreenElements.forEach((phoneScreenElement) => {
+      phoneScreenElement.style.right = (parseInt(phoneScreenElement.style.right.replace('px', '')||143) + delta) + 'px';
+    });
+  }
+
+  window.addEventListener('resize', resizeHandler);
+  const event = new Event('event');
+  event.initEvent('resize', true, true);
+  document.dispatchEvent(event);
+
   window.TouchUpApp = window.TouchUpApp || Object.create(touchUpApp);
 }());
 

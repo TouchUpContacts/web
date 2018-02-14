@@ -116,6 +116,10 @@ body {
       width: 100%;
       clip: rect(0,auto,auto,0);
 
+      .phone-border, .phone-screen {
+        will-change: right;
+      }
+
       .phone-border {
         position: fixed;
         top: 83px;
@@ -318,6 +322,16 @@ footer {
       cursor: pointer;
     }
   }
+}
+
+@media all and (min-width: 1100px) {
+
+  .sections-container {
+    article {
+      max-width: 500px;
+    }
+  }
+
 }
 
 @media all and (max-width: 870px) {
