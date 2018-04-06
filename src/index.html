@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>TouchUp</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles.css">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=id1128944336">
 </head>
@@ -11,85 +11,85 @@
   <div class="sections-container">
     <section class="take-care-of">
       <nav class="lang-selector">
-        <a href="/fr" class="active">FR</a>
+        <a href="/fr">FR</a>
         <a href="/en">EN</a>
       </nav>
       <div id="first-touch-up-logo"></div>
       <span class="touchup-title">TouchUp</span>
-      <h1>Et si on s’occupait de votre carnet de contact ?</h1>
+      <h1>{{mainTitle}}</h1>
       <svg width="45" height="45" id="arrow-down" viewBox="0 0 30 30"><g fill="#FFF" fill-rule="evenodd"><path
               d="M25.156 9l2.357 2.357-12.156 12.155-2.356-2.357z"/><path d="M3 11.357L5.357 9l12.155 12.155-2.357 2.357z"/></g></svg>
     </section>
     <section class="analyze">
       <article>
-        <h2>Analysons votre carnet</h2>
-        <p>Votre carnet de contact, il est dans quel état ? Super clean ? Ou des doublons, des clones et des contacts inutiles à perte de vue ? TouchUp vous dira tout !</p>
-        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Analysez-moi le carnet !</a>
+        <h2>{{analyse.title}}</h2>
+        <p>{{analyse.content}}</p>
+        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">{{analyse.cta}}</a>
       </article>
       <div class="phone-clip-container">
         <div class="phone-clip">
-          <img class="phone-border" srcset="images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png"  width="250" height="530"/>
-          <img class="phone-screen" srcset="images/ecran-01-niveau.png, images/ecran-01-niveau@2x.png 2x" width="210" height="373"/>
+          <img class="phone-border" srcset="/images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png" width="250" height="530"/>
+          <img class="phone-screen" srcset="/images/ecran-01-niveau.png, images/ecran-01-niveau@2x.png 2x" width="210" height="373"/>
         </div>
       </div>
     </section>
     <section class="play">
       <article>
-        <h2>Jouons pour l’améliorer</h2>
-        <p>Résoudre tous les soucis de votre carnet de contacts tout en vous amusant c’est désormais possible !</p>
-        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Je veux jouer</a>
+        <h2>{{play.title}}</h2>
+        <p>{{play.content}}</p>
+        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">{{play.cta}}</a>
       </article>
       <div class="phone-clip-container">
         <div class="phone-clip">
-          <img class="phone-border" srcset="images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png"  width="250" height="530"/>
-          <img class="phone-screen" srcset="images/ecran-02-jeux.png, images/ecran-02-jeux@2x.png 2x" width="210" height="373"/>
+          <img class="phone-border" srcset="/images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png" width="250" height="530"/>
+          <img class="phone-screen" srcset="/images/ecran-02-jeux.png, images/ecran-02-jeux@2x.png 2x" width="210" height="373"/>
         </div>
       </div>
     </section>
     <section class="keep">
       <article>
-        <h2>Gardez le contrôle</h2>
-        <p>C’est vous qui décidez ce que vous souhaitez garder ou non. Nous ne ferons jamais une action automatique sans vous l’avoir fait valider avant.</p>
-        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Je veux voir ça !</a>
+        <h2>{{keep.title}}</h2>
+        <p>{{keep.content}}</p>
+        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">{{keep.cta}}</a>
       </article>
       <div class="phone-clip-container">
         <div class="phone-clip">
-          <img class="phone-border" srcset="images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png"  width="250" height="530"/>
-          <img class="phone-screen" srcset="images/ecran-03-fusions.png, images/ecran-03-fusions@2x.png 2x" width="210" height="373"/>
+          <img class="phone-border" srcset="/images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png" width="250" height="530"/>
+          <img class="phone-screen" srcset="/images/ecran-03-fusions.png, images/ecran-03-fusions@2x.png 2x" width="210" height="373"/>
         </div>
       </div>
     </section>
     <section class="be-afraid-of">
       <article>
-        <h2>Récupérez vos contacts supprimés</h2>
-        <p>Parce que nous savons que vos contacts sont précieux, vous pouvez récupérez à tout moment vos fiches supprimées !</p>
-        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Rassurez-moi encore !</a>
+        <h2>{{be-afraid-of.title}}</h2>
+        <p>{{be-afraid-of.content}}</p>
+        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">{{be-afraid-of.cta}}</a>
       </article>
       <div class="phone-clip-container">
         <div class="phone-clip">
-          <img class="phone-border" srcset="images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png"  width="250" height="530"/>
-          <img class="phone-screen" srcset="images/ecran-04-historique.png, images/ecran-04-historique@2x.png 2x" width="210" height="373"/>
+          <img class="phone-border" srcset="/images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png" width="250" height="530"/>
+          <img class="phone-screen" srcset="/images/ecran-04-historique.png, images/ecran-04-historique@2x.png 2x" width="210" height="373"/>
         </div>
       </div>
     </section>
     <section class="forget">
       <article>
-        <h2>N’oubliez pas les anniversaires</h2>
-        <p>On vous notifie à chaque anniversaire et vous pouvez directement écrire un message à l’élu(e) du jour.</p>
-        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Ho oui, notifiez-moi</a>
+        <h2>{{forget.title}}</h2>
+        <p>{{forget.content}}</p>
+        <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">{{forget.cta}}</a>
       </article>
       <div class="phone-clip-container">
         <div class="phone-clip">
-          <img class="phone-border" srcset="images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png"  width="250" height="530"/>
-          <img class="phone-screen" srcset="images/ecran-05-anniv.png, images/ecran-05-anniv@2x.png 2x" width="210" height="373"/>
+          <img class="phone-border" srcset="/images/img-phone-empty-shadow.png, images/img-phone-empty-shadow@2x.png" width="250" height="530"/>
+          <img class="phone-screen" srcset="/images/ecran-05-anniv.png, images/ecran-05-anniv@2x.png 2x" width="210" height="373"/>
         </div>
       </div>
     </section>
     <section class="say">
       <div id="second-touch-up-logo"></div>
       <span class="touchup-title">TouchUp</span>
-      <p>Vos contacts vous diront Merci !</p>
-      <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">Allé, testez l’appli</a>
+      <p>{{say.title}}</p>
+      <a class="call-to-action" href="https://itunes.apple.com/fr/app/touchup/id1128944336?mt=8" target="_blank">{{say.cta}}</a>
       <div class="social-links">
         <a href="https://www.facebook.com/TouchUpContacts"><svg width="40" height="40" viewBox="0 0 30 30"><path
               d="M16.25 25V15H20v-2.5h-3.75V10c.24-.975.516-1.678 2.5-1.25H20V5c-.312.093-1.39 0-2.5 0-2.757 0-4.54 1.66-5 5v2.5H10V15h2.5v10h3.75z" fill="#FFF" fill-rule="evenodd"/></svg></a>
@@ -103,30 +103,30 @@
     </section>
     <footer>
       <section>
-        <h3>En voir plus</h3>
+        <h3>{{footer.more.title}}</h3>
         <nav>
-          <a href="">Les jeux sur TouchUp</a>
-          <a href="">Les niveaux sur TouchUp</a>
-          <a href="">Les niveaux sur TouchUp</a>
+          <a href="">{{footer.more.games}}</a>
+          <a href="">{{footer.more.levels}}</a>
+          <a href="">{{footer.more.levels}}</a>
         </nav>
       </section>
       <section>
-        <h3>À propos</h3>
+        <h3>{{footer.about.title}}</h3>
         <nav>
-          <a href="">Qui sommes-nous ?</a>
-          <a href="">Télécharger TouchUp sur iOS</a>
-          <a href="">Bientôt sur Android</a>
+          <a href="">{{footer.about.whoarewe}}</a>
+          <a href="">{{footer.about.ios}}</a>
+          <a href="">{{footer.about.android}}</a>
         </nav>
       </section>
       <section>
-        <h3>Vous aimez TouchUp ?</h3>
+        <h3>{{footer.like.title}}</h3>
         <nav>
-          <a href="">Télécharger le kit de presse</a>
+          <a href="">{{footer.like.presskit}}</a>
         </nav>
       </section>
     </footer>
   </div>
-  <script src="bodymovin.light.min.js"></script>
-  <script src="<!-- inject:js -->"></script>
+  <script src="/bodymovin.light.min.js"></script>
+  <script src="/<!-- inject:js -->"></script>
 </body>
 </html>

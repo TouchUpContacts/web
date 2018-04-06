@@ -35,6 +35,13 @@
   event.initEvent('resize', true, true);
   document.dispatchEvent(event);
 
+  // map the "active" class in the lang selector
+  [].forEach.call(document.querySelectorAll('.lang-selector a'), (item) => {
+    if((new RegExp(`^${item.href}`)).test(window.location.href)) {
+      item.classList.add('active');
+    }
+  })
+
   window.TouchUpApp = window.TouchUpApp || Object.create(touchUpApp);
 }());
 

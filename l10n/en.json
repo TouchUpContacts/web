@@ -1,0 +1,49 @@
+{
+  "mainTitle": "Et si on s’occupait de votre carnet de contact ?",
+  "analyse": {
+    "title": "Analysons votre carnet",
+    "content": "Votre carnet de contact, il est dans quel état ? Super clean ? Ou des doublons, des clones et des contacts inutiles à perte de vue ? TouchUp vous dira tout !",
+    "cta": "Analysez-moi le carnet !"
+  },
+  "play": {
+    "title": "Jouons pour l’améliorer",
+    "content": "Résoudre tous les soucis de votre carnet de contacts tout en vous amusant c’est désormais possible !",
+    "cta": "Je veux jouer"
+  },
+  "keep": {
+    "title": "Gardez le contrôle",
+    "content": "C’est vous qui décidez ce que vous souhaitez garder ou non. Nous ne ferons jamais une action automatique sans vous l’avoir fait valider avant.",
+    "cta": "Je veux voir ça !"
+  },
+  "be-afraid-of": {
+    "title": "Récupérez vos contacts supprimés",
+    "content": "Parce que nous savons que vos contacts sont précieux, vous pouvez récupérez à tout moment vos fiches supprimées !",
+    "cta": "Rassurez-moi encore !"
+  },
+  "forget": {
+    "title": "N’oubliez pas les anniversaires",
+    "content": "On vous notifie à chaque anniversaire et vous pouvez directement écrire un message à l’élu(e) du jour.",
+    "cta": "Ho oui, notifiez-moi"
+  },
+  "say": {
+    "title": "Vos contacts vous diront Merci !",
+    "cta": "Allé, testez l’appli"
+  },
+  "footer": {
+    "more": {
+      "title": "En voir plus",
+      "games": "Les jeux sur TouchUp",
+      "level": "Les niveaux sur TouchUp"
+    },
+    "about": {
+      "title": "En voir plus",
+      "whoarewe": "Qui sommes-nous ?",
+      "ios": "Télécharger TouchUp sur iOS",
+      "android": "Bientôt sur Android"
+    },
+    "like": {
+      "title": "Vous aimez TouchUp ?",
+      "presskit": "Télécharger le kit de presse"
+    }
+  }
+}

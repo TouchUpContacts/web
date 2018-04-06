@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TouchUp</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"/>
+  <meta name="apple-itunes-app" content="app-id=id1128944336">
+</head>
+<body>
+<script>
+  setTimeout(() => {
+    window.location.replace(/^fr|en/.test(navigator.language)
+      ? `${window.location.href}${navigator.language.slice(0, 2)}/index.html`
+      : `${window.location.href}en/index.html`);
+  }, 500);
+</script>
+</body>
+</html>
