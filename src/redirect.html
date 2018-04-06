@@ -11,8 +11,8 @@
 <script>
   setTimeout(() => {
     window.location.replace(/^fr|en/.test(navigator.language)
-      ? `${window.location.href}${navigator.language.slice(0, 2)}/index.html`
-      : `${window.location.href}en/index.html`);
+      ? `${window.location.href}${navigator.language.slice(0, 2)}`
+      : `${window.location.href}en`);
   }, 500);
 </script>
 </body>
