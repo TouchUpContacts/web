@@ -28,6 +28,7 @@
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
     "concurrently": "^3.4.0",
+    "l10n-populate": "^1.0.0",
     "lite-server": "^2.2.2",
     "node-sass": "^4.5.2",
     "rimraf": "^2.6.1",
