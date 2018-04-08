@@ -420,4 +420,13 @@ footer {
       }
     }
   }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+
+    section {
+      margin-bottom: 20px;
+    }
+  }
 }
