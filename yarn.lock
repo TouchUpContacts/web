@@ -1179,8 +1179,8 @@ klaw@^1.0.0:
     graceful-fs "^4.1.9"
 
 l10n-populate@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/l10n-populate/-/l10n-populate-1.0.0.tgz#91b1d836f2c7ae20f794edc7c6de9aacea09baf2"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/l10n-populate/-/l10n-populate-1.0.1.tgz#75bfe8379fea991881cc503a8191319368b277ce"
   dependencies:
     colors "^1.1.2"
     commander "^2.14.1"
