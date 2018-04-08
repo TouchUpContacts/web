@@ -15,7 +15,7 @@
     "postbuild": "cp src/redirect.html dist/ && mv dist/redirect.html dist/index.html",
     "watch:css": "chokidar 'src/**/*.scss' -c 'npm run build:css'",
     "watch:js": "chokidar 'src/*.js' -c 'npm run inject:js'",
-    "watch:html": "chokidar 'src/*.html' -c 'npm run build'",
+    "watch:html": "chokidar 'src/*.html' 'l10n/*.json' -c 'npm run build'",
     "watch": "npm run build && concurrently \"lite-server dist\" \"npm run watch:html\" \"npm run watch:css\" \"npm run watch:js\"",
     "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
