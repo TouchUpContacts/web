@@ -42,6 +42,12 @@
     }
   })
 
+  document.getElementById('arrow-down').addEventListener('click', () => {
+    document.querySelector('.analyze').scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+
   window.TouchUpApp = window.TouchUpApp || Object.create(touchUpApp);
 }());
 

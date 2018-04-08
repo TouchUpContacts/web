@@ -62,6 +62,8 @@ body {
   .take-care-of {
     justify-content: center;
     padding-top: 35px;
+    min-height: 100vh;
+
     .lang-selector {
       position: absolute;
       top: 15px; right: 40px;
@@ -185,6 +187,7 @@ body {
   animation: bounce .8s cubic-bezier(.17,.67,.83,.67) infinite;
   will-change: width;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 #arrow-reflect {
