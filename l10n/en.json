@@ -1,49 +1,50 @@
 {
-  "mainTitle": "Et si on s’occupait de votre carnet de contact ?",
+  "mainTitle": "What about doing some cleaning in your address book?",
   "analyse": {
-    "title": "Analysons votre carnet",
-    "content": "Votre carnet de contact, il est dans quel état ? Super clean ? Ou des doublons, des clones et des contacts inutiles à perte de vue ? TouchUp vous dira tout !",
-    "cta": "Analysez-moi le carnet !"
+    "title": "Let’s analyze your contacts",
+    "content": "How messy is your adress book? Super-clean? Or with clones, empty or useless contacts everywhere? TouchUp will tell you all about it!",
+    "cta": "Let’s analyse it"
   },
   "play": {
-    "title": "Jouons pour l’améliorer",
-    "content": "Résoudre tous les soucis de votre carnet de contacts tout en vous amusant c’est désormais possible !",
-    "cta": "Je veux jouer"
+    "title": "Improving while playing",
+    "content": "You can resolve all your adress book issues while having fun and playing TouchUp little games!",
+    "cta": "I want to play"
   },
   "keep": {
-    "title": "Gardez le contrôle",
-    "content": "C’est vous qui décidez ce que vous souhaitez garder ou non. Nous ne ferons jamais une action automatique sans vous l’avoir fait valider avant.",
-    "cta": "Je veux voir ça !"
+    "title": "Keep control",
+    "content": "TouchUp will never make an action without asking you to check it before! You decide what you want to keep or not.",
+    "cta": "Let’s see that"
   },
   "be-afraid-of": {
-    "title": "Récupérez vos contacts supprimés",
-    "content": "Parce que nous savons que vos contacts sont précieux, vous pouvez récupérez à tout moment vos fiches supprimées !",
-    "cta": "Rassurez-moi encore !"
+    "title": "Always keep your contacts safe",
+    "content": "Because we know that your contacts are precious to you, you can restore your deleted contacts whenever you want!",
+    "cta": "Keep my contacts safe"
   },
   "forget": {
-    "title": "N’oubliez pas les anniversaires",
-    "content": "On vous notifie à chaque anniversaire et vous pouvez directement écrire un message à l’élu(e) du jour.",
-    "cta": "Ho oui, notifiez-moi"
+    "title": "Never forget your contacts birthday",
+    "content": "We notify you for each birthday and you can write directly a message to the lucky one",
+    "cta": "That sounds great!"
   },
   "say": {
-    "title": "Vos contacts vous diront Merci !",
-    "cta": "Allé, testez l’appli"
+    "title": "Your contacts will be grateful",
+    "cta": "I want to test this cool app"
   },
   "footer": {
     "more": {
-      "title": "En voir plus",
-      "games": "Les jeux sur TouchUp",
-      "levels": "Les niveaux sur TouchUp"
+      "title": "What else?",
+      "games": "The games",
+      "levels": "The levels"
     },
     "about": {
-      "title": "En voir plus",
-      "whoarewe": "Qui sommes-nous ?",
-      "ios": "Télécharger TouchUp sur iOS",
-      "android": "Bientôt sur Android"
+      "title": "About",
+      "whoarewe": "Who we are",
+      "ios": "Download TouchUp for iOS",
+      "android": "Soon on Android..."
     },
     "like": {
-      "title": "Vous aimez TouchUp ?",
-      "presskit": "Télécharger le kit de presse"
+      "title": "You like TouchUp ?",
+      "presskit": "Download the press kit",
+      "facebook": "Share the app on Facebook"
     }
   }
 }
