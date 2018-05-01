@@ -392,6 +392,14 @@ footer {
     article {
       max-width: 500px;
     }
+
+    .touchup-title {
+      top: -28px;
+    }
+  }
+
+  .touch-up-logo {
+    transform: scale(1.5);
   }
 
 }
