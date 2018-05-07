@@ -290,49 +290,6 @@ body {
   }
 }
 
-footer {
-  background-color: #f0f5f7;
-  display: grid;
-  grid-template-areas:
-    "more about like";
-  justify-items: start;
-  text-align: left;
-  padding: 60px 70px;
-
-  section:first-child {
-    grid-area: more;
-  }
-
-  section:nth-child(2){
-    grid-area: about;
-    a:last-child {
-      opacity: .4;
-    }
-  }
-
-  section:last-child {
-    grid-area: like;
-  }
-
-  h3 {
-    color: #3f3f54;
-    font-size: 17px;
-    font-weight: bold;
-    margin-top: 0px
-  }
-
-  nav {
-    display: block;
-  }
-
-  a {
-    display: block;
-    color: #7b7f8d;
-    margin-bottom: 20px;
-    text-decoration: none;
-  }
-}
-
 /*** Say ***/
 
 .say {
@@ -383,6 +340,49 @@ footer {
       transform: scale(1.2);
       cursor: pointer;
     }
+  }
+}
+
+footer {
+  background-color: #f0f5f7;
+  display: grid;
+  grid-template-areas:
+    "more about like";
+  justify-items: start;
+  text-align: left;
+  padding: 60px 70px;
+
+  section:first-child {
+    grid-area: more;
+  }
+
+  section:nth-child(2){
+    grid-area: about;
+    a:last-child {
+      opacity: .4;
+    }
+  }
+
+  section:last-child {
+    grid-area: like;
+  }
+
+  h3 {
+    color: #3f3f54;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 0px
+  }
+
+  nav {
+    display: block;
+  }
+
+  a {
+    display: block;
+    color: #7b7f8d;
+    margin-bottom: 20px;
+    text-decoration: none;
   }
 }
 
