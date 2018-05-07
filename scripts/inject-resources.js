@@ -15,7 +15,11 @@ const processTemplates = async () => {
       const writeStream = fs.createWriteStream(path.join(process.env.PWD, 'tmp', file));
       const injectJs = new stream.Transform({
         transform(chunk, encoding, callback) {
-          this.push(chunk.toString().replace('<!-- inject:js -->', `app-${process.env.APPREV}.min.js`));
+          this.push(
+            chunk
+              .toString()
+              .replace('<!-- inject:js -->', `app-${process.env.APPREV}.min.js`)
+              .replace('<!-- inject:css -->', `app-${process.env.APPREV}.css`));
           callback();
         }
       });
