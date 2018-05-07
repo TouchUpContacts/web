@@ -8,7 +8,7 @@
     "build:css": "node-sass src/styles.scss tmp/styles.css",
     "postbuild:css": "rimraf dist/*.css && cp -R tmp/*.css dist/",
     "build:js": "rimraf tmp/app-* dist/*.js.map && cp src/app.js tmp/ && uglifyjs tmp/app.js -o tmp/app-\"$APPREV\".min.js --source-map dist/app-\"$APPREV\".min.js.map --source-map-url app-\"$APPREV\".min.js.map --source-map-root / -m -c --screw-ie8",
-    "inject:js": "export APPREV=$(date +\"%Y%m%d%H%M%S\") && npm run build:js && sed -e \"s/<!-- inject:js -->/app-$APPREV.min.js/\" src/index.html > tmp/index.html && npm run postbuild",
+    "inject:js": "export APPREV=$(date +\"%Y%m%d%H%M%S\") && npm run build:js && node scripts/inject-resources.js && npm run postbuild",
     "postinject:js": "l10n-template -t tmp && rimraf dist/*.js && cp -R tmp/*.js dist/ && cp -R src/*.min.js dist/",
     "prebuild": "rimraf tmp dist && mkdir -p tmp dist && npm run move:assets",
     "build": "concurrently \"npm run build:css\" \"npm run inject:js\"",
