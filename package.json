@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "move:assets": "mkdir -p dist/images && cp -R images/* dist/images",
-    "build:css": "node-sass src/styles.scss tmp/app-\"$APPREV\".css",
+    "build:css": "node-sass src/styles.scss | cleancss --inline all -o tmp/app-\"$APPREV\".min.css",
     "postbuild:css": "rimraf dist/*.css && cp -R tmp/*.css dist/",
     "build:js": "rimraf tmp/app-* dist/*.js.map && cp src/app.js tmp/ && uglifyjs tmp/app.js -o tmp/app-\"$APPREV\".min.js --source-map dist/app-\"$APPREV\".min.js.map --source-map-url app-\"$APPREV\".min.js.map --source-map-root / -m -c --screw-ie8",
     "inject:js": "npm run build:js && npm run postbuild",
@@ -29,6 +29,7 @@
   "dependencies": {},
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
+    "clean-css-cli": "^4.1.11",
     "concurrently": "^3.4.0",
     "l10n-template": "^1.0.2",
     "lite-server": "^2.2.2",

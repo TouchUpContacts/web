@@ -19,7 +19,7 @@ const processTemplates = async () => {
             chunk
               .toString()
               .replace('<!-- inject:js -->', `app-${process.env.APPREV}.min.js`)
-              .replace('<!-- inject:css -->', `app-${process.env.APPREV}.css`));
+              .replace('<!-- inject:css -->', `app-${process.env.APPREV}.min.css`));
           callback();
         }
       });
