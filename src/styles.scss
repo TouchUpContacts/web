@@ -17,6 +17,7 @@ $easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
   --dark-grey: rgba(25, 25, 33, 1);
   --white: #fff;
   --white-variant: #f0f5f7;
+  --price: #f9c806;
 }
 
 * {
@@ -427,7 +428,7 @@ body {
     color: var(--grey);
     text-align: center;
 
-    h1, p {
+    h1, & > p {
       max-width: 500px;
       margin: 0 auto 25px auto;
     }
@@ -452,11 +453,10 @@ body {
     max-width: 790px;
     margin: 0 auto 45px auto;
 
-    .level-card {
-      display: grid;
-      grid-template-areas:
-              "picture"
-              "title";
+    .card {
+      display: flex;
+      flex-direction: column;
+      position: relative;
       justify-content: center;
       text-align: center;
       height: 250px;
@@ -491,6 +491,29 @@ body {
 
       h4 {
         font-size: 15px;
+      }
+
+      span[data-price] {
+        position: absolute;
+        display: inline-block;
+        background-color: var(--price);
+        color: var(--white);
+        top: 18px; right: 0px;
+        padding: 2px 10px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      span[data-price="free"] {
+        display: none;
+      }
+
+      &-more {
+        display: flex;
+        justifiy-content: center;
+        align-items: center;
       }
     }
   }
@@ -667,9 +690,8 @@ footer {
     .card-container {
       display: flex;
       flex-direction: column;
-      .level-card {
-        grid-template-areas: "picture title";
-        grid-column-gap: 15px;
+      .card {
+        flex-direction: row;
         align-items: center;
         justify-content: flex-start;
         height: 100px;
@@ -679,10 +701,31 @@ footer {
         img {
           width: 70px; height: 70px;
           border-radius: 70px;
+          margin: initial;
         }
 
         h3 {
+          margin-left: 15px;
           font-size: 15px;
+        }
+
+        span[data-price] {
+          top: 5px;
+        }
+      }
+
+      .game-card {
+        &::after {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          content: '';
+          display: block;
+          width: 10px; height: 18px;
+          background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMjVDNkRBIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjA3MSAwTC42NTcgMS40MTQgNy4wMiA3Ljc3OGwxLjQxNC0xLjQxNHoiLz48cGF0aCBkPSJNLjY1NyAxMS4zMTRsMS40MTQgMS40MTQgNi4zNjQtNi4zNjRMNy4wMjEgNC45NXoiLz48L2c+PC9zdmc+);
+          background-repeat: no-repeat;
+          background-size: 10px 18px;
         }
       }
     }

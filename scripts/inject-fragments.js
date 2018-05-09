@@ -11,10 +11,9 @@ const processTemplate = async () => {
   try {
     const src = extractSourceFromArgv(process.argv);
     const files = await util.promisify(fs.readdir)(path.join(process.env.PWD, src));
-    const cardFragmentTemplate = await util.promisify(fs.readFile)(path.join(process.env.PWD, 'templates', '_fragments', 'level-card.html'), 'utf8');
-    const contentMap = l10n.lookup(path.join(process.env.PWD, 'l10n'));
-    const { levels } = contentMap.get('fr.json');
-    const cardFragmentWithL10nKeys = generateCardFragments(cardFragmentTemplate, levels).join('');
+
+    const levelContent = await extract('level');
+    const gameContent = await extract('game');
 
     for (const file of files) {
       if(!/.html$/.test(file)) continue;
@@ -27,7 +26,8 @@ const processTemplate = async () => {
           this.push(
             chunk
               .toString()
-              .replace('<!-- inject:levels -->', cardFragmentWithL10nKeys)
+              .replace('<!-- inject:levels -->', levelContent)
+              .replace('<!-- inject:games -->', gameContent)
           );
           callback();
         }
@@ -42,20 +42,37 @@ const processTemplate = async () => {
   }
 }
 
-const generateCardFragments = (template, levels) => {
+const generateCardFragments = (template, cards, rootName) => {
   let cardTemplates = [];
-  for (const level in levels) {
-    if(typeof levels[level] === 'string') continue;
+  for (const card in cards) {
+    if(typeof cards[card] === 'string') continue;
     let cardTemplate = template;
-    const keyMap = l10n.buildMap(new Map(), levels[level]);
+    const keyMap = l10n.buildMap(new Map(), cards[card]);
     for (const [key] of keyMap) {
-      cardTemplate = cardTemplate.replace(new RegExp(`<%= card.${key} =>`, 'g'), `{{ levels.${level}.${key} }}`);
+      cardTemplate = cardTemplate.replace(new RegExp(`<%= card.${key} =>`, 'g'), `{{ ${rootName}s.${card}.${key} }}`);
     }
 
     cardTemplates.push(cardTemplate);
   }
 
   return cardTemplates;
+}
+
+const extract = async (fragmentName) => {
+  const cardFragmentTemplate = await util.promisify(fs.readFile)(
+    path.join(
+      process.env.PWD,
+      'templates',
+      '_fragments',
+      `${fragmentName}-card.html`
+    ),
+    'utf8');
+  const contentMap = l10n.lookup(path.join(process.env.PWD, 'l10n'));
+  return generateCardFragments(
+    cardFragmentTemplate,
+    contentMap.get('fr.json')[`${fragmentName}s`], // key is plural in json
+    fragmentName
+  ).join('');
 }
 
 processTemplate()
