@@ -32,12 +32,11 @@
   "header": {
     "home": "Home"
   },
-  "list": {
+  "levels": {
     "title": "Les Jeux sur TouchUp",
     "description": "L'idée de cette application est de vous permettre de nettoyer votre carnet de contact aussi facilement que si vous etiez en train de jouer",
-    "download": "Télécharger l'appli"
-  },
-  "levels": {
+    "more": "Et pleins d'autres jeux à venir...",
+    "download": "Télécharger l'appli",
     "first": {
       "title": "6 pieds sous terre",
       "image": "/images/games/img-level-1-big.svg"
