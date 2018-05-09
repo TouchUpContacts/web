@@ -1,5 +1,7 @@
 {
   "port": 8080,
-  "files": ["index.html", "./dist/*.{css,js}"],
-  "server": { "baseDir": "./dist" }
+  "files": ["./dist/index.html", "./dist/*.{css,js}", "./dist/**/*.html"],
+  "server": { "baseDir": "./dist" },
+  "open": false,
+  "reloadDelay": 250
 }
