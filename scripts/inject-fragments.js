@@ -45,6 +45,7 @@ const processTemplate = async () => {
 const generateCardFragments = (template, levels) => {
   let cardTemplates = [];
   for (const level in levels) {
+    if(typeof levels[level] === 'string') continue;
     let cardTemplate = template;
     const keyMap = l10n.buildMap(new Map(), levels[level]);
     for (const [key] of keyMap) {
