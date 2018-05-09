@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TouchUp</title>
+  <link rel="stylesheet" type="text/css" href="/<!-- inject:css -->">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"/>
+  <meta name="apple-itunes-app" content="app-id=id1128944336">
+</head>
+<body class="list-container">
+  <header>
+    <div class="touch-up-logo" id="list-touch-up-logo"></div>
+    <a href="/">{{header.home}}</a>
+    <nav class="lang-selector">
+      <a href="/fr/list.html">FR</a>
+      <a href="/en/list.html">EN</a>
+    </nav>
+  </header>
+  <section role="main">
+    <h1>{{list.title}}</h1>
+    <p>{{list.description}}</p>
+    <div class="card-container">
+      <!-- inject:levels -->
+    </div>
+    <a href="">{{list.download}}</a>
+  </section>
+  <footer>
+    <section>
+      <h3>{{footer.more.title}}</h3>
+      <nav>
+        <a href="">{{footer.more.games}}</a>
+        <a href="">{{footer.more.levels}}</a>
+        <a href="">{{footer.more.levels}}</a>
+      </nav>
+    </section>
+    <section>
+      <h3>{{footer.about.title}}</h3>
+      <nav>
+        <a href="">{{footer.about.whoarewe}}</a>
+        <a href="">{{footer.about.ios}}</a>
+        <a href="">{{footer.about.android}}</a>
+      </nav>
+    </section>
+    <section>
+      <h3>{{footer.like.title}}</h3>
+      <nav>
+        <a href="">{{footer.like.presskit}}</a>
+      </nav>
+    </section>
+  </footer>
+  <script src="/bodymovin.light.min.js"></script>
+  <script src="/<!-- inject:js -->"></script>
+</body>
+</html>

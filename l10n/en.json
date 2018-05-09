@@ -29,6 +29,40 @@
     "title": "Your contacts will be grateful",
     "cta": "I want to test this cool app"
   },
+  "header": {
+    "home": "Home"
+  },
+  "list": {
+    "title": "Les Jeux sur TouchUp",
+    "description": "L'idée de cette application est de vous permettre de nettoyer votre carnet de contact aussi facilement que si vous etiez en train de jouer",
+    "download": "Télécharger l'appli"
+  },
+  "levels": {
+    "first": {
+      "title": "6 pieds sous terre",
+      "image": "/images/games/img-level-1-big.svg"
+    },
+    "second": {
+      "title": "Sous l'océan",
+      "image": "/images/games/img-level-2-big.svg"
+    },
+    "third": {
+      "title": "Ras les pâquerettes",
+      "image": "/images/games/img-level-3-big.svg"
+    },
+    "fourth": {
+      "title": "Dans les hauteurs",
+      "image": "/images/games/img-level-4-big.svg"
+    },
+    "fifth": {
+      "title": "Au septième ciel",
+      "image": "/images/games/img-level-5-big.svg"
+    },
+    "sixth": {
+      "title": "Vers l’infini et au delà",
+      "image": "/images/games/img-level-6-big.svg"
+    }
+  },
   "footer": {
     "more": {
       "title": "What else?",

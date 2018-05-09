@@ -30,10 +30,19 @@
     });
   }
 
-  window.addEventListener('resize', resizeHandler);
-  const event = new Event('event');
-  event.initEvent('resize', true, true);
-  document.dispatchEvent(event);
+  if(phoneBorderElements.length > 0) {
+    window.addEventListener('resize', resizeHandler);
+    const event = new Event('event');
+    event.initEvent('resize', true, true);
+    document.dispatchEvent(event);
+
+    document.getElementById('arrow-down').addEventListener('click', () => {
+      document.querySelector('.analyze').scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  }
+
 
   // map the "active" class in the lang selector
   [].forEach.call(document.querySelectorAll('.lang-selector a'), (item) => {
@@ -41,12 +50,6 @@
       item.classList.add('active');
     }
   })
-
-  document.getElementById('arrow-down').addEventListener('click', () => {
-    document.querySelector('.analyze').scrollIntoView({
-      behavior: "smooth"
-    });
-  });
 
   window.TouchUpApp = window.TouchUpApp || Object.create(touchUpApp);
 }());
@@ -57,21 +60,35 @@
 (function(){
   "use strict";
   var animationData = {"v":"4.12.0","fr":30,"ip":0,"op":78,"w":180,"h":180,"nm":"logo","ddd":0,"assets":[{"id":"comp_0","layers":[{"ddd":0,"ind":1,"ty":4,"nm":"Calque de forme 1","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[93,69,0],"ix":2},"a":{"a":0,"k":[0,0,0],"ix":1},"s":{"a":0,"k":[37.984,37.984,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"d":1,"ty":"el","s":{"a":0,"k":[262,262],"ix":2},"p":{"a":0,"k":[0,0],"ix":3},"nm":"Tracé d'ellipse 1","mn":"ADBE Vector Shape - Ellipse","hd":false},{"ty":"st","c":{"a":0,"k":[1,1,1,1],"ix":3},"o":{"a":0,"k":100,"ix":4},"w":{"a":0,"k":10,"ix":5},"lc":2,"lj":1,"ml":4,"nm":"Contour 1","mn":"ADBE Vector Graphic - Stroke","hd":false},{"ty":"tr","p":{"a":0,"k":[-2,1],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transformer "}],"nm":"Ellipse 1","np":3,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"tm","s":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"n":["0p833_0p833_0p167_0p167"],"t":35.035,"s":[0],"e":[28]},{"t":48.0478515625}],"ix":1},"e":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"n":["0p833_0p833_0p167_0p167"],"t":27.027,"s":[0],"e":[28]},{"t":42.0419921875}],"ix":2},"o":{"a":0,"k":-182,"ix":3},"m":1,"ix":2,"nm":"Raccorder les tracés 1","mn":"ADBE Vector Filter - Trim","hd":false}],"ip":0,"op":80.0800800800801,"st":0,"bm":0},{"ddd":0,"ind":2,"ty":4,"nm":"Calque de forme 2","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[93,69,0],"ix":2},"a":{"a":0,"k":[0,0,0],"ix":1},"s":{"a":0,"k":[38,38,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"d":1,"ty":"el","s":{"a":0,"k":[262,262],"ix":2},"p":{"a":0,"k":[0,0],"ix":3},"nm":"Tracé d'ellipse 1","mn":"ADBE Vector Shape - Ellipse","hd":false},{"ty":"st","c":{"a":0,"k":[1,1,1,1],"ix":3},"o":{"a":0,"k":100,"ix":4},"w":{"a":0,"k":10,"ix":5},"lc":2,"lj":1,"ml":4,"nm":"Contour 1","mn":"ADBE Vector Graphic - Stroke","hd":false},{"ty":"tr","p":{"a":0,"k":[-2,1],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transformer "}],"nm":"Ellipse 1","np":3,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"tm","s":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"n":["0p833_0p833_0p167_0p167"],"t":0,"s":[0],"e":[0]},{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"n":["0p833_0p833_0p167_0p167"],"t":46.046,"s":[0],"e":[25.289]},{"t":59}],"ix":1},"e":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"n":["0p833_0p833_0p167_0p167"],"t":53,"s":[0],"e":[100]},{"t":78}],"ix":2},"o":{"a":0,"k":-88,"ix":3},"m":1,"ix":2,"nm":"Raccorder les tracés 1","mn":"ADBE Vector Filter - Trim","hd":false}],"ip":0,"op":80.0800800800801,"st":0,"bm":0},{"ddd":0,"ind":3,"ty":4,"nm":"bonhomme/loader Silhouettes","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[86.5,78,0],"ix":2},"a":{"a":0,"k":[86.5,123.5,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[27,3.265],[0,0],[-7.232,23.593],[-0.858,6.509],[4.467,2.595],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[7.798,-0.975],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-1.245,-14.155],[-0.211,-2.594],[-0.779,-5.916],[-4.809,-1.617],[-21,-7.087],[0,0],[7.446,-2.497],[12.842,-13.55],[-32.686,0],[-23.347,18.761]],"o":[[0,0],[20,-6.469],[5.16,-1.192],[0.836,-6.345],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-7.798,0.975],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0.298,3.385],[-3.563,3.048],[0.855,6.485],[7.177,22.269],[0,0],[-8,0.971],[-18.934,6.349],[23.454,19.105],[32.358,0],[-19.007,-20.269]],"v":[[13.77,56.334],[13.77,43.162],[58.82,-8.015],[68.971,-20.753],[62.576,-35.531],[62.729,-52.646],[66.608,-51.183],[58.312,-69.702],[70.005,-76.522],[56.355,-80.901],[62.69,-91.123],[51.479,-90.121],[46.118,-94.297],[46.605,-101.83],[41.244,-101.83],[35.882,-117.447],[37.832,-104.352],[21.748,-117.49],[24.673,-112.605],[6.152,-120.885],[11.026,-116.496],[-7.493,-122.83],[-0.671,-117.955],[-19.191,-121.366],[-13.83,-116.978],[-31.863,-117.949],[-25.04,-114.531],[-38.686,-110.131],[-53.308,-108.642],[-45.51,-105.019],[-57.206,-101.83],[-49.409,-101.83],[-59.644,-95.029],[-49.896,-98.506],[-62.081,-85.328],[-50.87,-89.222],[-62.568,-68.759],[-64.031,-43.435],[-63.286,-34.441],[-68.06,-19.999],[-57.741,-6.783],[-14.23,42.433],[-14.23,56.491],[-37.421,61.666],[-85.805,92.259],[0.145,122.83],[85.805,92.832]],"c":true},"ix":2},"nm":"Tracé 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[1,1,1,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"nm":"Fond 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[91.555,117.58],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[30.959,30.959],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transformer "}],"nm":"Groupe 1","np":2,"cix":2,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":120,"st":0,"bm":0}]}],"layers":[{"ddd":0,"ind":1,"ty":0,"nm":"loader","refId":"comp_0","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[90,90,0],"ix":2},"a":{"a":0,"k":[90,90,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"w":180,"h":180,"ip":0,"op":80,"st":0,"bm":0}]};
-  bodymovin.loadAnimation({
-    container: document.getElementById('first-touch-up-logo'),
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    animationData: animationData
-  });
 
-  bodymovin.loadAnimation({
-    container: document.getElementById('second-touch-up-logo'),
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    animationData: animationData
-  });
+  if(document.getElementById('first-touch-up-logo')) {
+    bodymovin.loadAnimation({
+      container: document.getElementById('first-touch-up-logo'),
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      animationData: animationData
+    });
+
+    bodymovin.loadAnimation({
+      container: document.getElementById('second-touch-up-logo'),
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      animationData: animationData
+    });
+  }
+
+  if(document.getElementById('list-touch-up-logo')) {
+    bodymovin.loadAnimation({
+      container: document.getElementById('list-touch-up-logo'),
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      animationData: animationData
+    });
+  }
+
 }());
 
 (function(){
@@ -85,5 +102,8 @@
     animationData: animationData
   };
 
-  bodymovin.loadAnimation(params);
+  if (document.getElementById('spock')) {
+    bodymovin.loadAnimation(params);
+  }
+
 }());
