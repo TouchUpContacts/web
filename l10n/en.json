@@ -39,27 +39,33 @@
     "download": "Télécharger l'appli",
     "first": {
       "title": "6 pieds sous terre",
-      "image": "/images/games/img-level-1-big.svg"
+      "subtitle": "1/6",
+      "image": "/images/levels/img-level-1-big.svg"
     },
     "second": {
       "title": "Sous l'océan",
-      "image": "/images/games/img-level-2-big.svg"
+      "subtitle": "2/6",
+      "image": "/images/levels/img-level-2-big.svg"
     },
     "third": {
       "title": "Ras les pâquerettes",
-      "image": "/images/games/img-level-3-big.svg"
+      "subtitle": "3/6",
+      "image": "/images/levels/img-level-3-big.svg"
     },
     "fourth": {
       "title": "Dans les hauteurs",
-      "image": "/images/games/img-level-4-big.svg"
+      "subtitle": "4/6",
+      "image": "/images/levels/img-level-4-big.svg"
     },
     "fifth": {
       "title": "Au septième ciel",
-      "image": "/images/games/img-level-5-big.svg"
+      "subtitle": "5/6",
+      "image": "/images/levels/img-level-5-big.svg"
     },
     "sixth": {
       "title": "Vers l’infini et au delà",
-      "image": "/images/games/img-level-6-big.svg"
+      "subtitle": "6/6",
+      "image": "/images/levels/img-level-6-big.svg"
     }
   },
   "games": {
