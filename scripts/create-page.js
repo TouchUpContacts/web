@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const stream = require("stream");
 
-const git = require('simple-git/promise')(path.join(__dirname, '..'));
 const [,,type, name] = process.argv;
 
 if (!name || !type) {
@@ -37,9 +36,6 @@ const processCreation = async (name) => {
     readStream
       .pipe(injectNameAndType)
       .pipe(writeStream);
-
-    await git.add(`src/${type}s/${name}.html`);
-    await git.commit(`creates ${name}.html ${type} page`);
 
     return `Page ${name} successfully created and added to git.`;
   } catch (e) {
