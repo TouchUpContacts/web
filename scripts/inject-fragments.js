@@ -3,6 +3,9 @@ const path = require('path');
 const util = require('util');
 const stream = require('stream');
 
+const recursiveReadDir = require('recursive-readdir');
+const fse = require('fs-extra');
+
 const l10n = require('l10n-template/src/l10n');
 
 const extractSourceFromArgv = require('./extract-source-from-argv');
@@ -10,17 +13,23 @@ const extractSourceFromArgv = require('./extract-source-from-argv');
 const processTemplate = async () => {
   try {
     const src = extractSourceFromArgv(process.argv);
-    const files = await util.promisify(fs.readdir)(path.join(process.env.PWD, src));
+    const root = path.join(process.env.PWD, src);
+    const files = await recursiveReadDir(root, ['*.scss', '*.js', 'redirect.html']);
 
     const levelContent = await extract('level');
     const gameContent = await extract('game');
 
     for (const file of files) {
-      if(!/.html$/.test(file)) continue;
-      if('redirect.html' === file) continue;
+      const dirname = path.dirname(file).replace(root, '');
+      const basename = path.basename(file);
 
-      const readStream = fs.createReadStream(path.join(process.env.PWD, src, file));
-      const writeStream = fs.createWriteStream(path.join(process.env.PWD, 'tmp', file));
+      const readStream = fs.createReadStream(file);
+
+      if(dirname !== '') {
+        await fse.mkdirp(path.join(process.env.PWD, 'tmp', dirname));
+      }
+
+      const writeStream = fs.createWriteStream(path.join(process.env.PWD, 'tmp',  dirname, basename));
       const injectLevels = new stream.Transform({
         transform(chunk, encoding, callback) {
           this.push(
@@ -78,5 +87,6 @@ const extract = async (fragmentName) => {
 processTemplate()
   .then()
   .catch(() => {
+    console.log(e);
     process.exit(1);
   })

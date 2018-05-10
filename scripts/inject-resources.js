@@ -3,12 +3,15 @@ const path = require('path');
 const util = require('util');
 const stream = require('stream');
 
+const recursiveReadDir = require('recursive-readdir');
+const fse = require('fs-extra');
+
 const extractSourceFromArgv = require('./extract-source-from-argv');
 
 const processTemplates = async () => {
   try {
     const src = extractSourceFromArgv(process.argv);
-    const files = await util.promisify(fs.readdir)(path.join(process.env.PWD, src));
+    const files = await recursiveReadDir(path.join(process.env.PWD, src), ['*.scss', '*.js', 'redirect.html']);
 
     const tmpContent = await util.promisify(fs.readdir)(path.join(process.env.PWD, 'tmp'));
     let [ jsFile ] = tmpContent.filter((file) => {
@@ -20,11 +23,16 @@ const processTemplates = async () => {
     });
 
     for (const file of files) {
-      if(!/.html$/.test(file)) continue;
-      if('redirect.html' === file) continue;
+      const dirname = path.dirname(file).replace(path.join(process.env.PWD, src), '');
+      const basename = path.basename(file);
 
-      const readStream = fs.createReadStream(path.join(process.env.PWD, src, file));
-      const writeStream = fs.createWriteStream(path.join(process.env.PWD, 'tmp', 'with-resources', file));
+      const readStream = fs.createReadStream(file);
+
+      if(dirname !== '') {
+        await fse.mkdirp(path.join(process.env.PWD, 'tmp', 'with-resources', dirname));
+      }
+
+      const writeStream = fs.createWriteStream(path.join(process.env.PWD, 'tmp', 'with-resources', dirname, basename));
       const injectJs = new stream.Transform({
         transform(chunk, encoding, callback) {
           this.push(
@@ -46,10 +54,9 @@ const processTemplates = async () => {
 }
 
 processTemplates()
-  .then(() => {
-    // process.exit(0);
-  })
+  .then()
   .catch(e => {
+    console.log(e);
     process.exit(1);
   })
 

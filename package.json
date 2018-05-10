@@ -12,9 +12,11 @@
     "prebuild": "rimraf tmp dist && mkdir -p tmp dist && npm run move:assets",
     "build": "export APPREV=$(date +\"%Y%m%d%H%M%S\") && concurrently \"npm run build:css\" \"npm run build:js\"",
     "postbuild": "mkdir -p tmp/with-resources && node scripts/inject-resources.js && node scripts/inject-fragments.js --source=tmp/with-resources && rimraf tmp/with-resources && l10n-template -t tmp && cp src/redirect.html dist/ && mv dist/redirect.html dist/index.html; exit 0;",
-    "watch": "npm run build && concurrently \"lite-server dist\" \"chokidar 'src/*.html' 'l10n/*.json' 'src/**/*.scss' 'src/*.js' -c 'npm run build'\"",
+    "watch": "npm run build && concurrently \"lite-server dist\" \"chokidar 'src/*.html' 'src/**/*.html' 'templates/*.html' 'templates/**/*.html' 'l10n/*.json' 'src/**/*.scss' 'src/*.js' -c 'npm run build'\"",
     "start": "npm run watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "add:game": "node scripts/create-page.js game",
+    "add:level": "node scripts/create-page.js level"
   },
   "repository": {
     "type": "git",
@@ -27,10 +29,13 @@
     "chokidar-cli": "^1.2.0",
     "clean-css-cli": "^4.1.11",
     "concurrently": "^3.4.0",
+    "fs-extra": "^6.0.1",
     "l10n-template": "^1.1.0",
     "lite-server": "^2.2.2",
     "node-sass": "^4.5.2",
+    "recursive-readdir": "^2.2.2",
     "rimraf": "^2.6.1",
+    "simple-git": "^1.92.0",
     "uglify-js-harmony": "^2.7.5"
   }
 }
