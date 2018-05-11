@@ -7,19 +7,33 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"/>
   <meta name="apple-itunes-app" content="app-id=id1128944336">
 </head>
-<body class="game-container">
-<header>
+<body class="detail-container">
+<header
+    style="background-color:{{<%= type =>s.<%= name =>.bgColor}};background-image:url({{<%= type =>s.<%= name =>.bgImage}})">
   <div class="touch-up-logo" id="list-touch-up-logo"></div>
   <a href="/">{{header.home}}</a>
   <nav class="lang-selector">
-    <a href="/fr/<%= name =>.html">FR</a>
-    <a href="/en/<%= name =>.html">EN</a>
+    <a href="/fr/<%= type =>s/<%= name =>.html">FR</a>
+    <a href="/en/<%= type =>s/<%= name =>.html">EN</a>
   </nav>
+  <img src="{{<%= type =>s.<%= name =>.image}}" alt="{{<%= type =>s.<%= name =>.title}}"/>
 </header>
 <section role="main">
-  <h1>{{<%= name =>s.<%= name =>.title}}</h1>
-  <p>{{<%= name =>s.<%= name =>.description}}</p>t
-  <a href="">{{games.download}}</a>
+  <h1>{{<%= type =>s.<%= name =>.title}}</h1>
+  <h2>{{<%= type =>s.<%= name =>.subtitle}}</h2>
+  <p>{{<%= type =>s.<%= name =>.description}}</p>
+  <a href="">{{<%= type =>s.download}}</a>
+  <iframe identifier="{{<%= type =>s.<%= name =>.video}}"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/{{<%= type =>s.<%= name =>.video}}"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen></iframe>
+  <nav>
+    <a class="previous" href="{{<%= type =>s.<%= name =>.previous.href}}">{{<%= type =>s.<%= name =>.previous.label}}</a>
+    <a class="next" href="{{<%= type =>s.<%= name =>.next.href}}">{{<%= type =>s.<%= name =>.next.label}}</a>
+  </nav>
 </section>
 <footer>
   <section>

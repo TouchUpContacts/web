@@ -86,7 +86,7 @@ const extract = async (fragmentName) => {
 
 processTemplate()
   .then()
-  .catch(() => {
+  .catch((e) => {
     console.log(e);
     process.exit(1);
   })
