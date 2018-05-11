@@ -57,7 +57,7 @@
       "subtitle": "4/6",
       "image": "/images/levels/img-level-4-big.svg"
     },
-    "fifth": {
+    "seventh-heaven": {
       "title": "Au septième ciel",
       "subtitle": "5/6",
       "image": "/images/levels/img-level-5-big.svg"
@@ -73,34 +73,44 @@
     "description": "L'idée de cette application est de vous permettre de nettoyer votre carnet de contact aussi facilement que si vous etiez en train de jouer",
     "download": "Télécharger l'appli",
     "more": "Et pleins d'autres jeux à venir...",
-    "first": {
-      "title": "6 pieds sous terre",
-      "image": "/images/games/img-level-1-big.svg",
+    "fusion": {
+      "title": "Fusion",
+      "image": "/images/games/jeu-fusions.svg",
       "price": "free"
     },
-    "second": {
-      "title": "Sous l'océan",
-      "image": "/images/games/img-level-2-big.svg",
+    "empty": {
+      "title": "Contact vides",
+      "image": "/images/games/jeu-vides.svg",
       "price": "free"
     },
-    "third": {
-      "title": "Ras les pâquerettes",
-      "image": "/images/games/img-level-3-big.svg",
+    "be-international": {
+      "title": "Be international",
+      "image": "/images/games/jeu-international.svg",
+      "price": "0,99€"
+    },
+    "almost-perfect": {
+      "title": "Presque parfait",
+      "image": "/images/games/jeu-parfait.svg",
       "price": "free"
     },
-    "fourth": {
-      "title": "Dans les hauteurs",
-      "image": "/images/games/img-level-4-big.svg",
+    "photo": {
+      "title": "Tu veux ma photo ?",
+      "image": "/images/games/jeu-photos.svg",
       "price": "free"
     },
-    "fifth": {
-      "title": "Au septième ciel",
-      "image": "/images/games/img-level-5-big.svg",
+    "clone-wars": {
+      "title": "Guerre des clones",
+      "image": "/images/games/jeu-clones.svg",
       "price": "free"
     },
-    "sixth": {
-      "title": "Vers l’infini et au delà",
-      "image": "/images/games/img-level-6-big.svg",
+    "without-name": {
+      "title": "Sans nom",
+      "image": "/images/games/jeu-sans-nom.svg",
+      "price": "free"
+    },
+    "uppercase": {
+      "title": "Roi des majuscules",
+      "image": "/images/games/jeu-majuscules.svg",
       "price": "free"
     }
   },
