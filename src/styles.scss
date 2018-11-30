@@ -423,7 +423,7 @@ body {
     grid-area: main;
     background-color: var(--white);
 
-    & > a {
+    .download-btn {
       display: inline-block;
       color: var(--white);
       background-color: var(--green);
@@ -549,6 +549,7 @@ body {
 .detail-container {
   color: var(--grey);
   grid-template-rows: minmax(320px, auto) minmax(calc(100vh - 320px - 301px), auto) minmax(301px, auto);
+  background-color: var(--white);
 
   header, [role="main"] {
     width: 100vw;
@@ -584,9 +585,18 @@ body {
     }
   }
   [role="main"] {
-    background-color: var(--white);
     padding: 0 60px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+
+    .wrapper {
+      max-width: 600px;
+
+      & > a {
+        margin-bottom: 40px;
+      }
+    }
 
     h1, h2 {
       font-weight: normal;
@@ -601,10 +611,6 @@ body {
       font-size: 17px;
       color: var(--light-grey);
       margin:0 0 24px 0;
-    }
-
-    & > a {
-      margin-bottom: 40px;
     }
 
     iframe {
@@ -827,11 +833,14 @@ footer {
         margin-left: 0;
       }
     }
+
     [role="main"] {
       padding: 20px;
 
-      & > a {
-        margin-bottom: 45px;
+      .wrapper {
+        & > a {
+          margin-bottom: 45px;
+        }
       }
     }
 

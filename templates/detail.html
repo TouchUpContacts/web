@@ -21,21 +21,23 @@
     <img src="{{<%= type =>s.<%= name =>.image}}" alt="{{<%= type =>s.<%= name =>.title}}"/>
 </header>
 <section role="main">
-  <h1>{{<%= type =>s.<%= name =>.title}}</h1>
-  <h2>{{<%= type =>s.<%= name =>.subtitle}}</h2>
-  <p>{{<%= type =>s.<%= name =>.description}}</p>
-  <a href="">{{<%= type =>s.download}}</a>
-  <iframe identifier="{{<%= type =>s.<%= name =>.video}}"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/{{<%= type =>s.<%= name =>.video}}"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen></iframe>
-  <nav>
-    <a class="previous" href="{{<%= type =>s.<%= name =>.previous.href}}">{{<%= type =>s.<%= name =>.previous.label}}</a>
-    <a class="next" href="{{<%= type =>s.<%= name =>.next.href}}">{{<%= type =>s.<%= name =>.next.label}}</a>
-  </nav>
+    <div class="wrapper">
+      <h1>{{<%= type =>s.<%= name =>.title}}</h1>
+      <h2>{{<%= type =>s.<%= name =>.subtitle}}</h2>
+      <p>{{<%= type =>s.<%= name =>.description}}</p>
+      <a href="" class="download-btn">{{<%= type =>s.download}}</a>
+      <iframe identifier="{{<%= type =>s.<%= name =>.video}}"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/{{<%= type =>s.<%= name =>.video}}"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+      <nav>
+        <a class="previous" href="{{<%= type =>s.<%= name =>.previous.href}}">{{<%= type =>s.<%= name =>.previous.label}}</a>
+        <a class="next" href="{{<%= type =>s.<%= name =>.next.href}}">{{<%= type =>s.<%= name =>.next.label}}</a>
+      </nav>
+    </div>
 </section>
 <footer>
   <section>
