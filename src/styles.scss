@@ -408,7 +408,7 @@ body {
     color: var(--white);
     align-items: center;
 
-    & > a {
+    & > a, & .action-wrapper > a {
       color: inherit;
       text-decoration: none;
       font-family: 'Montserrat', sans-serif;
@@ -555,28 +555,26 @@ body {
   }
 
   header {
-    display: grid;
-    grid-template-areas:
-            "logo home-btn lang-selector"
-            "picture picture picture";
-    grid-template-rows: 60px auto;
-    grid-template-columns: 38px auto auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     min-height: 320px;
-    background-size: contain;
+    background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
 
-    .touch-up-logo {
-      grid-area: logo
-    }
+    .action-wrapper {
+      display: flex;
+      width: 100%;
+      height: 60px;
+      align-items: center;
+      & > a {
+        line-height: 38px;
+      }
 
-    & > a {
-      grid-area: home-btn;
-      padding-left: 15px;
-    }
-
-    .lang-selector {
-      grid-area: lang-selector;
+      .lang-selector {
+        grid-area: lang-selector;
+      }
     }
 
     & > img {
@@ -813,13 +811,17 @@ footer {
       }
     }
   }
+  .list-container, .detail-container {
+    header {
+      & > div {
+        display: none;
+      }
+    }
+  }
 
   .list-container {
     header {
       padding: 0 20px;
-      & > div {
-        display: none;
-      }
 
       & > a {
         margin-left: 0;
@@ -887,10 +889,29 @@ footer {
           grid-template-areas: "picture title" "picture subtitle";
         }
       }
+
+      .card-more {
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 
   .detail-container {
+    header {
+      background-size: contain;
+      padding: 0 20px;
+
+      a {
+        padding-left: 0;
+      }
+
+      .action-wrapper {
+        display: flex;
+      }
+    }
+
     [role="main"] {
       nav {
         a {

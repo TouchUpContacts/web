@@ -10,13 +10,15 @@
 <body class="detail-container">
 <header
     style="background-color:{{<%= type =>s.<%= name =>.bgColor}};background-image:url({{<%= type =>s.<%= name =>.bgImage}})">
-  <div class="touch-up-logo" id="list-touch-up-logo"></div>
-  <a href="/">{{header.home}}</a>
-  <nav class="lang-selector">
-    <a href="/fr/<%= type =>s/<%= name =>.html">FR</a>
-    <a href="/en/<%= type =>s/<%= name =>.html">EN</a>
-  </nav>
-  <img src="{{<%= type =>s.<%= name =>.image}}" alt="{{<%= type =>s.<%= name =>.title}}"/>
+    <div class="action-wrapper">
+        <div class="touch-up-logo" id="list-touch-up-logo"></div>
+        <a href="/">{{header.home}}</a>
+        <nav class="lang-selector">
+            <a href="/fr/<%= type =>s/<%= name =>.html">FR</a>
+            <a href="/en/<%= type =>s/<%= name =>.html">EN</a>
+        </nav>
+    </div>
+    <img src="{{<%= type =>s.<%= name =>.image}}" alt="{{<%= type =>s.<%= name =>.title}}"/>
 </header>
 <section role="main">
   <h1>{{<%= type =>s.<%= name =>.title}}</h1>
