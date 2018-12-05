@@ -22,6 +22,10 @@
 </header>
 <section role="main">
     <div class="wrapper">
+      <nav>
+        <a class="previous" href="{{<%= type =>s.<%= name =>.previous.href}}" alt="{{<%= type =>s.<%= name =>.previous.label}}">{{<%= type =>s.<%= name =>.previous.label}}</a>
+        <a class="next" href="{{<%= type =>s.<%= name =>.next.href}}" alt="{{<%= type =>s.<%= name =>.next.label}}">{{<%= type =>s.<%= name =>.next.label}}</a>
+      </nav>
       <h1>{{<%= type =>s.<%= name =>.title}}</h1>
       <h2>{{<%= type =>s.<%= name =>.subtitle}}</h2>
       <p>{{<%= type =>s.<%= name =>.description}}</p>
@@ -34,8 +38,8 @@
               allow="autoplay; encrypted-media"
               allowfullscreen></iframe>
       <nav>
-        <a class="previous" href="{{<%= type =>s.<%= name =>.previous.href}}">{{<%= type =>s.<%= name =>.previous.label}}</a>
-        <a class="next" href="{{<%= type =>s.<%= name =>.next.href}}">{{<%= type =>s.<%= name =>.next.label}}</a>
+        <a class="previous" href="{{<%= type =>s.<%= name =>.previous.href}}" alt="{{<%= type =>s.<%= name =>.previous.label}}">{{<%= type =>s.<%= name =>.previous.label}}</a>
+        <a class="next" href="{{<%= type =>s.<%= name =>.next.href}}" alt="{{<%= type =>s.<%= name =>.next.label}}">{{<%= type =>s.<%= name =>.next.label}}</a>
       </nav>
     </div>
 </section>
