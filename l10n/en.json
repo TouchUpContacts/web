@@ -114,6 +114,21 @@
       "price": "free"
     }
   },
+  "who-we-are": {
+    "title": "Qui sommes-nous ?",
+    "intro": "Nous sommes deux passionés qui avons créé cette application pour nous mais aussi pour aider les autres à gérer leurs contacts !",
+    "audrey": {
+      "name": "Audrey Hacq",
+      "description": "Audrey est designer d’interfaces depuis 2010. Lorsqu’elle ne travaille pas à améliorer le quotidien des gens en designant des services et des expériences, elle écrit des articles !",
+      "links": "<a href='https://medium.com/@audreyhacq'>Articles Medium</a>/<a href='http://audreyhacq.tumblr.com'>Portfolio</a>"
+    },
+    "jerome": {
+      "name": "Jérôme Morissard",
+      "description": " Jérôme est développeur iOS",
+      "links": "<a href='https://github.com/leverdeterre'>GitHub</a>/<a href='https://medium.com/@leverdeterre'>Medium</a>"
+    },
+    "contact-us": "Contactez-nous !"
+  },
   "footer": {
     "more": {
       "title": "What else?",

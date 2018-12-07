@@ -682,6 +682,43 @@ body {
   }
 }
 
+.page-who-we-are {
+  [role="main"] {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      font-size: 36px;
+      font-weight: normal;
+    }
+
+    .bio {
+      margin-bottom: 90px;
+    }
+
+    h2, a {
+      color: var(--cyan);
+    }
+
+    h2 {
+      font-size: 25px;
+      font-weight: normal;
+    }
+
+    a {
+      font-size: 20px;
+      margin: 0 5px;
+    }
+  }
+  .wrapper {
+    max-width: 600px;
+
+    & > p {
+      margin-bottom: 46px;
+    }
+  }
+}
+
 footer {
   background-color: var(--white-variant);
   display: grid;
