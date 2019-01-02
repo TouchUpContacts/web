@@ -32,40 +32,113 @@
   "header": {
     "home": "Home"
   },
+  "ios": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336",
   "levels": {
     "title": "Les Jeux sur TouchUp",
     "description": "L'idée de cette application est de vous permettre de nettoyer votre carnet de contact aussi facilement que si vous etiez en train de jouer",
     "more": "Et pleins d'autres jeux à venir...",
-    "download": "Télécharger l'appli",
-    "first": {
-      "title": "6 pieds sous terre",
+    "download": "Download the App",
+    "six-feet-under": {
+      "title": "Six feet under",
       "subtitle": "1/6",
-      "image": "/assets/levels/img-level-1-big.svg"
+      "image": "/assets/levels/img-level-1-big.svg",
+      "bgColor": "#2F1C38",
+      "bgImage": "/assets/levels/background-level-01.svg",
+      "description": "<p>Well, let's not lie: the level of this address book is low... Very low! But don't panic, with TouchUp it’s possible to raise fast in the light of day!</p><p>And you, what is your address book level?</p>",
+      "href": "/en/levels/six-feet-under.html",
+      "previous": {
+        "label": "To Infinity and Beyond",
+        "href": "/en/levels/to-infinity-and-beyond.html"
+      },
+      "next": {
+        "label": "Under the sea",
+        "href": "/en/levels/under-the-sea.html"
+      }
     },
-    "second": {
-      "title": "Sous l'océan",
+    "under-the-sea": {
+      "title": "Under the Sea",
       "subtitle": "2/6",
-      "image": "/assets/levels/img-level-2-big.svg"
+      "image": "/assets/levels/img-level-2-big.svg",
+      "bgColor": "#1E529A",
+      "bgImage": "/assets/levels/background-level-02.svg",
+      "description": "<p>For the moment the level of this address book is little under the water... But don’t panic, TouchUp can help you reach the surface!</p><p>And you, what is your address book level?</p>",
+      "href": "/en/levels/six-feet-under.html",
+      "previous": {
+        "label": "Six feet under",
+        "href": "/en/levels/six-feet-under.html"
+      },
+      "next": {
+        "label": "Among the flowers",
+        "href": "/en/levels/among-the-flowers.html"
+      }
     },
-    "third": {
-      "title": "Ras les pâquerettes",
+    "among-the-flowers": {
+      "title": "Among the flowers",
       "subtitle": "3/6",
-      "image": "/assets/levels/img-level-3-big.svg"
+      "image": "/assets/levels/img-level-3-big.svg",
+      "bgColor": "#39BF5F",
+      "bgImage": "/assets/levels/background-level-03.svg",
+      "description": "<p>The level of this address book is not a disaster, far from there! There are some obstacles on the path but with a little bit of courage we should go very far...</p><p>And you, what is your address book level?</p>",
+      "href": "/en/levels/among-the-flowers.html",
+      "previous": {
+        "label": "Under the Sea",
+        "href": "/en/levels/under-the-sea.html"
+      },
+      "next": {
+        "label": "In the mountains",
+        "href": "/en/levels/in-the-mountains.html"
+      }
     },
-    "fourth": {
-      "title": "Dans les hauteurs",
+    "in-the-mountains": {
+      "title": "In the mountains",
       "subtitle": "4/6",
-      "image": "/assets/levels/img-level-4-big.svg"
+      "image": "/assets/levels/img-level-4-big.svg",
+      "bgColor": "#53CAFD",
+      "bgImage": "/assets/levels/background-level-04.svg",
+      "description": "<p>Not too bad for a beginning! This address book seems pretty clean but we can always do better, no?</p><p>And you, what is your address book level?</p>",
+      "href": "/en/levels/in-the-mountains.html",
+      "previous": {
+        "label": "Among the flowers",
+        "href": "/en/levels/among-the-flowers.html"
+      },
+      "next": {
+        "label": "To Heaven",
+        "href": "/en/levels/to-heaven.html"
+      }
     },
-    "seventh-heaven": {
-      "title": "Au septième ciel",
+    "to-heaven": {
+      "title": "To Heaven",
       "subtitle": "5/6",
-      "image": "/assets/levels/img-level-5-big.svg"
+      "image": "/assets/levels/img-level-5-big.svg",
+      "bgColor": "#0ea7e8",
+      "bgImage": "/assets/levels/background-level-05.svg",
+      "description": "<p>This address book is almost perfect. Few bits here and there and it will be at the top!</p><p>And you, what is your address book level?</p>",
+      "href": "/en/levels/to-heaven.html",
+      "previous": {
+        "label": "In the mountains",
+        "href": "/en/levels/in-the-mountains.html"
+      },
+      "next": {
+        "label": "To infinity and beyond",
+        "href": "/en/levels/to-infinity-and-beyond.html"
+      }
     },
-    "sixth": {
-      "title": "Vers l’infini et au delà",
+    "to-infinity-and-beyond": {
+      "title": "To infinity and beyond",
       "subtitle": "6/6",
-      "image": "/assets/levels/img-level-6-big.svg"
+      "image": "/assets/levels/img-level-6-big.svg",
+      "bgColor": "#171742",
+      "bgImage": "/assets/levels/background-level-06.svg",
+      "description": "<p>This address book is at the top! Now with TouchUp, let’s make sure it stays that way ;)</p><p>And you, what is your address book level?</p>",
+      "href": "/en/levels/to-infinity-and-beyond.html",
+      "previous": {
+        "label": "To Heaven",
+        "href": "/en/levels/to-heaven.html"
+      },
+      "next": {
+        "label": "Six feet under",
+        "href": "/en/levels/six-feet-under.html"
+      }
     }
   },
   "games": {

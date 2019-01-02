@@ -32,57 +32,117 @@
   "header": {
     "home": "Accueil"
   },
+  "ios": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336",
   "levels": {
     "title": "Les niveaux sur TouchUp",
     "description": "A chaque fois que vous améliorez votre carnet, vous augmentez votre niveau pour vous rapprocher des étoiles !",
     "download": "Télécharger l'appli",
-    "first": {
+    "six-feet-under": {
       "title": "6 pieds sous terre",
       "subtitle": "1/6",
-      "image": "/assets/levels/img-level-1-big.svg"
+      "image": "/assets/levels/img-level-1-big.svg",
+      "bgColor": "#2F1C38",
+      "bgImage": "/assets/levels/background-level-01.svg",
+      "description": "<p>Bon, on ne va pas se mentir : le niveau de ce carnet de contacts est bas... Très bas ! Mais pas de panique, avec TouchUp il est possible de vite remonter à la lumière du jour !</p><p>Et vous, quel est le niveau de votre carnet de contact ?</p>",
+      "href": "/fr/levels/six-feet-under.html",
+      "previous": {
+        "label": "Vers l’infini et au delà",
+        "href": "/fr/levels/to-infinity-and-beyond.html"
+      },
+      "next": {
+        "label": "Sous l'océan",
+        "href": "/fr/levels/under-the-sea.html"
+      }
     },
-    "second": {
+    "under-the-sea": {
       "title": "Sous l'océan",
       "subtitle": "2/6",
-      "image": "/assets/levels/img-level-2-big.svg"
+      "image": "/assets/levels/img-level-2-big.svg",
+      "bgColor": "#1E529A",
+      "bgImage": "/assets/levels/background-level-02.svg",
+      "description": "<p>Le niveau de ce carnet de contacts est un peu sous l’eau... Mais TouchUp peut permettre de vite remonter à la surface !</p><p>Et vous, quel est le niveau de votre carnet de contact ?</p>",
+      "href": "/fr/levels/under-the-sea.html",
+      "previous": {
+        "label": "6 pieds sous terre",
+        "href": "/fr/levels/six-feet-under.html"
+      },
+      "next": {
+        "label": "Ras les pâquerettes",
+        "href": "/fr/levels/among-the-flowers.html"
+      }
     },
-    "third": {
+    "among-the-flowers": {
       "title": "Ras les pâquerettes",
       "subtitle": "3/6",
-      "image": "/assets/levels/img-level-3-big.svg"
+      "image": "/assets/levels/img-level-3-big.svg",
+      "bgColor": "#39BF5F",
+      "bgImage": "/assets/levels/background-level-03.svg",
+      "description": "<p>Le niveau de ce carnet n’est pas une catastrophe, loin de là ! Il y a bien sûr quelques obstacles sur le chemin mais avec un peu de courage on devrait aller loin...</p><p>Et vous, quel est le niveau de votre carnet de contact ?</p>",
+      "href": "/fr/levels/among-the-flowers.html",
+      "previous": {
+        "label": "Sous l'océan",
+        "href": "/fr/levels/under-the-sea.html"
+      },
+      "next": {
+        "label": "Dans les hauteurs",
+        "href": "/fr/levels/in-the-mountains.html"
+      }
     },
-    "fourth": {
+    "in-the-mountains": {
       "title": "Dans les hauteurs",
       "subtitle": "4/6",
-      "image": "/assets/levels/img-level-4-big.svg"
+      "image": "/assets/levels/img-level-4-big.svg",
+      "bgColor": "#53CAFD",
+      "bgImage": "/assets/levels/background-level-04.svg",
+      "description": "<p>Pas mal pour un début ! Ce carnet de contacts est plutôt clean…mais on peut toujours faire mieux, non ?</p><p>Et vous, quel est le niveau de votre carnet de contact ?</p>",
+      "href": "/fr/levels/in-the-mountains.html",
+      "previous": {
+        "label": "Ras les pâquerettes",
+        "href": "/fr/levels/among-the-flowers.html"
+      },
+      "next": {
+        "label": "Au septième ciel",
+        "href": "/fr/levels/to-heaven.html"
+      }
     },
-    "seventh-heaven": {
+    "to-heaven": {
       "title": "Au septième ciel",
       "subtitle": "5/6",
       "image": "/assets/levels/img-level-5-big.svg",
       "bgColor": "#0ea7e8",
       "bgImage":  "/assets/levels/background-niveau-05.svg",
-      "description": " Plus de doublons, plus de contacts vides, beaucoup de contacts bien remplis... Votre carnet est presque parfait. Quelques retouches par-ci par-là et vous serez au top !",
-      "video": "Ay-mdLMDtbs",
-      "href": "/fr/levels/seventh-heaven.html",
+      "description": "<p>Ce carnet de contact est presque parfait. Quelques retouches par-ci par-là et il sera au top !</p><p>Et vous, quel est le niveau de votre carnet de contact ?</p>",
+      "href": "/fr/levels/to-heaven.html",
       "previous": {
         "label": "Dans les hauteurs",
-        "href": "/fr/levels/top.html"
+        "href": "/fr/levels/in-the-mountains.html"
       },
       "next": {
         "label": "Vers l’infini et au delà",
-        "href": "/fr/levels/infini.html"
+        "href": "/fr/levels/to-infinity-and-beyond.html"
       }
     },
-    "sixth": {
+    "to-infinity-and-beyond": {
       "title": "Vers l’infini et au delà",
       "subtitle": "6/6",
-      "image": "/assets/levels/img-level-6-big.svg"
+      "image": "/assets/levels/img-level-6-big.svg",
+      "bgColor": "#171742",
+      "bgImage":  "/assets/levels/background-level-06.svg",
+      "description": "<p>Ce carnet de contact est au top ! Avec TouchUp, faisons en sorte que le niveau ne rechute pas ;)</p><p>Et vous, quel est le niveau de votre carnet de contact ?</p>",
+      "href": "/fr/levels/to-infinity-and-beyond.html",
+      "previous": {
+        "label": "Au septième ciel",
+        "href": "/fr/levels/to-heaven.html"
+      },
+      "next": {
+        "label": "6 pieds sous terre",
+        "href": "/fr/levels/six-feet-under.html"
+      }
     }
   },
   "games": {
     "title": "Les jeux sur TouchUp",
-    "description": "L'idée de cette application est de vous permettre de nettoyer votre carnet de contact aussi facilement que si vous etiez en train de jouer",
+    "description": "<p>L'idée de cette application est de vous permettre de nettoyer votre carnet de contact aussi facilement que si vous etiez en train de jouer",
     "download": "Télécharger l'appli",
     "more": "Et pleins d'autres jeux à venir...",
     "fusion": {
