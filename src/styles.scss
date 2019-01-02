@@ -522,7 +522,7 @@ body {
         display: inline-block;
         background-color: var(--price);
         color: var(--white);
-        top: 18px; right: 0px;
+        top: 0; right: -20px;
         padding: 2px 10px;
         border-top-left-radius: 6px;
         border-bottom-left-radius: 6px;
@@ -941,14 +941,17 @@ footer {
         }
 
         span[data-price] {
-          top: 5px;
+          top: -20px;
+          right: -5px;
+          border-bottom-right-radius: 6px;
+          border-top-left-radius: 0;
         }
       }
 
       .card {
         &::after {
           position: absolute;
-          right: 10px;
+          right: 15px;
           top: 50%;
           transform: translateY(-50%);
           content: '';
@@ -962,6 +965,12 @@ footer {
         & > a {
           display: grid;
           grid-template-areas: "picture title" "picture subtitle";
+        }
+      }
+
+      .game-card {
+        h3 {
+          margin-top: 21px;
         }
       }
 
