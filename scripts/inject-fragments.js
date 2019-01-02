@@ -62,7 +62,7 @@ const processTemplate = async () => {
   } catch (e) {
     throw e;
   }
-}
+};
 
 const generateCardFragments = (template, cards, rootName) => {
   let cardTemplates = [];
