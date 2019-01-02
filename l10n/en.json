@@ -135,8 +135,14 @@
   "footer": {
     "more": {
       "title": "What else?",
-      "games": "The games",
-      "levels": "The levels"
+      "games": {
+        "label": "The games",
+        "target": "/en/games.html"
+      },
+      "levels": {
+        "label": "The Levels",
+        "target": "/en/levels.html"
+      }
     },
     "about": {
       "title": "About",

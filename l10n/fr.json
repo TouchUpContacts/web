@@ -147,8 +147,14 @@
   "footer": {
     "more": {
       "title": "En voir plus",
-      "games": "Les jeux sur TouchUp",
-      "levels": "Les niveaux sur TouchUp"
+      "games": {
+        "label": "Les jeux sur TouchUp",
+        "target": "/fr/games.html"
+      },
+      "levels": {
+        "label": "Les niveaux sur TouchUp",
+        "target": "/fr/levels.html"
+      }
     },
     "about": {
       "title": "À propos",

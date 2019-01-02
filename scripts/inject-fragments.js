@@ -16,8 +16,9 @@ const processTemplate = async () => {
     const root = path.join(process.env.PWD, src);
     const files = await recursiveReadDir(root, ['*.scss', '*.js', 'redirect.html']);
 
-    const levelContent = await extract('level');
-    const gameContent = await extract('game');
+    const levelContent = await extract('level', 'card', true);
+    const gameContent = await extract('game', 'card', true);
+    const footerContent = await extract('footer');
 
     for (const file of files) {
       const dirname = path.dirname(file).replace(root, '');
@@ -42,7 +43,19 @@ const processTemplate = async () => {
         }
       });
 
+      const injectFooter = new stream.Transform({
+        transform(chunk, encoding, callback) {
+          this.push(
+            chunk
+              .toString()
+              .replace('<!-- inject:footer -->', footerContent)
+          );
+          callback();
+        }
+      });
+
       readStream
+        .pipe(injectFooter)
         .pipe(injectLevels)
         .pipe(writeStream)
     }
@@ -58,35 +71,63 @@ const generateCardFragments = (template, cards, rootName) => {
     let cardTemplate = template;
     const keyMap = l10n.buildMap(new Map(), cards[card]);
     for (const [key] of keyMap) {
-      cardTemplate = cardTemplate.replace(new RegExp(`<%= card.${key} =>`, 'g'), `{{ ${rootName}s.${card}.${key} }}`);
+      cardTemplate = cardTemplate.replace(new RegExp(`<%= ${key} =>`, 'g'), `{{ ${rootName}.${card}.${key} }}`);
     }
 
     cardTemplates.push(cardTemplate);
   }
 
   return cardTemplates;
-}
+};
 
-const extract = async (fragmentName) => {
-  const cardFragmentTemplate = await util.promisify(fs.readFile)(
+const generateFragment = (template, contentKeys, rootName) => {
+  let fragment = template;
+  for (const contentKey in contentKeys) {
+    if (typeof contentKeys[contentKey] === 'string') continue;
+    const keyMap = l10n.buildMap(new Map(), contentKeys[contentKey]);
+    for (const [key] of keyMap) {
+      fragment = fragment.replace(
+        new RegExp(`<%= ${contentKey}.${key} =>`, 'g'),
+        `{{ ${rootName}.${contentKey}.${key} }}`
+      );
+    }
+  }
+
+  return fragment;
+};
+
+const extract = async (fragmentName, suffix, pluralize = false) => {
+  const fragmentTemplate = await util.promisify(fs.readFile)(
     path.join(
       process.env.PWD,
       'templates',
       '_fragments',
-      `${fragmentName}-card.html`
+      `${fragmentName}${suffix ? `-${suffix}` : ''}.html`
     ),
     'utf8');
-  const contentMap = l10n.lookup(path.join(process.env.PWD, 'l10n'));
-  return generateCardFragments(
-    cardFragmentTemplate,
-    contentMap.get('fr.json')[`${fragmentName}s`], // key is plural in json
-    fragmentName
-  ).join('');
-}
+  const contentMap = l10n
+      .lookup(path.join(process.env.PWD, 'l10n'))
+      .get('fr.json')[`${fragmentName}${pluralize ? `s` : ''}`];
+
+  let content;
+
+  switch (suffix) {
+    case 'card':
+      content = generateCardFragments(
+        fragmentTemplate,
+        contentMap,
+        pluralize ? `${fragmentName}s` : fragmentName
+      ).join('');
+      break;
+    default:
+      content = generateFragment(fragmentTemplate, contentMap, fragmentName);
+  }
+  return content;
+};
 
 processTemplate()
   .then()
   .catch((e) => {
     console.log(e);
     process.exit(1);
-  })
+  });
