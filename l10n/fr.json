@@ -131,15 +131,18 @@
     "intro": "Nous sommes deux passionés qui avons créé cette application pour nous mais aussi pour aider les autres à gérer leurs contacts !",
     "audrey": {
       "name": "Audrey Hacq",
-      "description": "Audrey est designer d’interfaces depuis 2010. Lorsqu’elle ne travaille pas à améliorer le quotidien des gens en designant des services et des expériences, elle écrit des articles !",
-      "links": "<a href='https://medium.com/@audreyhacq'>Articles Medium</a>/<a href='http://audreyhacq.tumblr.com'>Portfolio</a>"
+      "description": "Audrey est designer d’interfaces depuis 2010. Lorsque je n’essaie pas d’améliorer le quotidien des gens en designant des services et des expériences, j’écris des articles !",
+      "links": "<a href='https://medium.com/@audreyhacq'>Articles Medium</a>/<a href='http://audreyhacq.tumblr.com'>Portfolio</a>/<a href='https://dribbble.com/audreyhacq'>Dribble</a>"
     },
     "jerome": {
       "name": "Jérôme Morissard",
-      "description": " Jérôme est développeur iOS",
-      "links": "<a href='https://github.com/leverdeterre'>GitHub</a>/<a href='https://medium.com/@leverdeterre'>Medium</a>"
+      "description": "Jérôme, développeur iOS passionné. J'ai toujours voulu réussir à gérer mes contacts de manière efficace mais je n'ai jamais trouvé l'application parfaite, donc je l'ai faite :)",
+      "links": "<a href='https://github.com/leverdeterre'>GitHub</a>"
     },
-    "contact-us": "Contactez-nous !"
+    "contact-us": {
+      "label": "Contactez-nous !",
+      "target": "mailto:touchupmycontacts@gmail.com"
+    }
   },
   "footer": {
     "more": {

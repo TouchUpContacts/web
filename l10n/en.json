@@ -115,19 +115,22 @@
     }
   },
   "who-we-are": {
-    "title": "Qui sommes-nous ?",
-    "intro": "Nous sommes deux passionés qui avons créé cette application pour nous mais aussi pour aider les autres à gérer leurs contacts !",
+    "title": "How are we?",
+    "intro": "We are two friends passionate about their jobs, who launched this application to help other people manage their contacts!",
     "audrey": {
       "name": "Audrey Hacq",
-      "description": "Audrey est designer d’interfaces depuis 2010. Lorsqu’elle ne travaille pas à améliorer le quotidien des gens en designant des services et des expériences, elle écrit des articles !",
-      "links": "<a href='https://medium.com/@audreyhacq'>Articles Medium</a>/<a href='http://audreyhacq.tumblr.com'>Portfolio</a>"
+      "description": "I have been an interface designer since 2010. When I'm not trying to improve people's daily life designing services and experiences, I write articles!",
+      "links": "<a href='https://medium.com/@audreyhacq'>Articles Medium</a>/<a href='http://audreyhacq.tumblr.com'>Portfolio</a>/<a href='https://dribbble.com/audreyhacq'>Dribble</a>"
     },
     "jerome": {
       "name": "Jérôme Morissard",
-      "description": " Jérôme est développeur iOS",
+      "description": "Jérôme, iOS engineer. I always wanted to be able to manage easily my address book but I have never found the perfect app to do that... I thus created it myself :)",
       "links": "<a href='https://github.com/leverdeterre'>GitHub</a>/<a href='https://medium.com/@leverdeterre'>Medium</a>"
     },
-    "contact-us": "Contactez-nous !"
+    "contact-us": {
+      "label": "Contact us!",
+      "target": "mailto:touchupmycontacts@gmail.com"
+    }
   },
   "footer": {
     "more": {
