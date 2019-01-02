@@ -146,9 +146,14 @@
     },
     "about": {
       "title": "About",
-      "whoarewe": "Who we are",
-      "ios": "Download TouchUp for iOS",
-      "android": "Soon on Android..."
+      "who-we-are": {
+        "label": "Who are we?",
+        "target": "/en/who-we-are.html"
+      },
+      "ios": {
+        "label": "Download TouchUp for iOS",
+        "target": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336"
+      }
     },
     "like": {
       "title": "You like TouchUp ?",
