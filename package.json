@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "move:assets": "mkdir -p dist/images && cp -R images/* dist/images",
+    "move:assets": "mkdir -p dist/assets && cp -R assets/* dist/assets",
     "build:css": "node-sass src/styles.scss | cleancss --inline all -o tmp/app-\"$APPREV\".min.css",
     "postbuild:css": "rimraf dist/*.css && cp -R tmp/*.css dist/",
     "build:js": "rimraf tmp/app-* dist/*.js.map && cp src/app.js tmp/ && uglifyjs tmp/app.js -o tmp/app-\"$APPREV\".min.js --source-map dist/app-\"$APPREV\".min.js.map --source-map-url app-\"$APPREV\".min.js.map --source-map-root / -m -c --screw-ie8",

@@ -39,29 +39,29 @@
     "first": {
       "title": "6 pieds sous terre",
       "subtitle": "1/6",
-      "image": "/images/levels/img-level-1-big.svg"
+      "image": "/assets/levels/img-level-1-big.svg"
     },
     "second": {
       "title": "Sous l'océan",
       "subtitle": "2/6",
-      "image": "/images/levels/img-level-2-big.svg"
+      "image": "/assets/levels/img-level-2-big.svg"
     },
     "third": {
       "title": "Ras les pâquerettes",
       "subtitle": "3/6",
-      "image": "/images/levels/img-level-3-big.svg"
+      "image": "/assets/levels/img-level-3-big.svg"
     },
     "fourth": {
       "title": "Dans les hauteurs",
       "subtitle": "4/6",
-      "image": "/images/levels/img-level-4-big.svg"
+      "image": "/assets/levels/img-level-4-big.svg"
     },
     "seventh-heaven": {
       "title": "Au septième ciel",
       "subtitle": "5/6",
-      "image": "/images/levels/img-level-5-big.svg",
+      "image": "/assets/levels/img-level-5-big.svg",
       "bgColor": "#0ea7e8",
-      "bgImage":  "/images/levels/background-niveau-05.svg",
+      "bgImage":  "/assets/levels/background-niveau-05.svg",
       "description": " Plus de doublons, plus de contacts vides, beaucoup de contacts bien remplis... Votre carnet est presque parfait. Quelques retouches par-ci par-là et vous serez au top !",
       "video": "Ay-mdLMDtbs",
       "href": "/fr/levels/seventh-heaven.html",
@@ -77,7 +77,7 @@
     "sixth": {
       "title": "Vers l’infini et au delà",
       "subtitle": "6/6",
-      "image": "/images/levels/img-level-6-big.svg"
+      "image": "/assets/levels/img-level-6-big.svg"
     }
   },
   "games": {
@@ -87,42 +87,42 @@
     "more": "Et pleins d'autres jeux à venir...",
     "fusion": {
       "title": "Fusion",
-      "image": "/images/games/jeu-fusions.svg",
+      "image": "/assets/games/jeu-fusions.svg",
       "price": "free"
     },
     "empty": {
       "title": "Contact vides",
-      "image": "/images/games/jeu-vides.svg",
+      "image": "/assets/games/jeu-vides.svg",
       "price": "free"
     },
     "be-international": {
       "title": "Be international",
-      "image": "/images/games/jeu-international.svg",
+      "image": "/assets/games/jeu-international.svg",
       "price": "0,99€"
     },
     "almost-perfect": {
       "title": "Presque parfait",
-      "image": "/images/games/jeu-parfait.svg",
+      "image": "/assets/games/jeu-parfait.svg",
       "price": "free"
     },
     "photo": {
       "title": "Tu veux ma photo ?",
-      "image": "/images/games/jeu-photos.svg",
+      "image": "/assets/games/jeu-photos.svg",
       "price": "free"
     },
     "clone-wars": {
       "title": "Guerre des clones",
-      "image": "/images/games/jeu-clones.svg",
+      "image": "/assets/games/jeu-clones.svg",
       "price": "free"
     },
     "without-name": {
       "title": "Sans nom",
-      "image": "/images/games/jeu-sans-nom.svg",
+      "image": "/assets/games/jeu-sans-nom.svg",
       "price": "free"
     },
     "uppercase": {
       "title": "Roi des majuscules",
-      "image": "/images/games/jeu-majuscules.svg",
+      "image": "/assets/games/jeu-majuscules.svg",
       "price": "1,09€"
     }
   },
@@ -164,7 +164,10 @@
     },
     "like": {
       "title": "Vous aimez TouchUp ?",
-      "presskit": "Télécharger le kit de presse"
+      "presskit": {
+        "label": "Télécharger le kit de presse",
+        "target": "/assets/press-kit.zip"
+      }
     }
   }
 }
