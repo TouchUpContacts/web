@@ -30,7 +30,7 @@
     "clean-css-cli": "^4.1.11",
     "concurrently": "^3.4.0",
     "fs-extra": "^6.0.1",
-    "l10n-template": "^1.1.0",
+    "l10n-template": "^1.2.1",
     "lite-server": "^2.2.2",
     "node-sass": "^4.10.0",
     "recursive-readdir": "^2.2.2",
