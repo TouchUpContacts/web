@@ -434,6 +434,10 @@ body {
       text-decoration: none;
     }
   }
+
+  [data-content="-"] {
+    display: none;
+  }
 }
 
 .list-container {
@@ -919,6 +923,8 @@ footer {
           flex-direction: row;
           align-items: center;
           justify-content: flex-start;
+          display: flex;
+          grid-template-areas: "picture title";
         }
 
         img {
@@ -943,9 +949,7 @@ footer {
           border-bottom-right-radius: 6px;
           border-top-left-radius: 0;
         }
-      }
 
-      .card {
         &::after {
           position: absolute;
           right: 15px;
@@ -957,17 +961,6 @@ footer {
           background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjMjVDNkRBIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjA3MSAwTC42NTcgMS40MTQgNy4wMiA3Ljc3OGwxLjQxNC0xLjQxNHoiLz48cGF0aCBkPSJNLjY1NyAxMS4zMTRsMS40MTQgMS40MTQgNi4zNjQtNi4zNjRMNy4wMjEgNC45NXoiLz48L2c+PC9zdmc+);
           background-repeat: no-repeat;
           background-size: 10px 18px;
-        }
-
-        & > a {
-          display: grid;
-          grid-template-areas: "picture title" "picture subtitle";
-        }
-      }
-
-      .game-card {
-        h3 {
-          margin-top: 21px;
         }
       }
 

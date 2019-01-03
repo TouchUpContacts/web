@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TouchUp</title>
+  <link rel="stylesheet" type="text/css" href="/<!-- inject:css -->">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"/>
+  <meta name="apple-itunes-app" content="app-id=id1128944336">
+</head>
+<body class="detail-container">
+<header
+    style="background-color:{{games.clone-wars.bgColor}};background-image:url({{games.clone-wars.bgImage}})">
+    <div class="action-wrapper">
+        <div class="touch-up-logo" id="list-touch-up-logo"></div>
+        <a href="/">{{header.home}}</a>
+        <nav class="lang-selector">
+            <a href="/fr/games/clone-wars.html">FR</a>
+            <a href="/en/games/clone-wars.html">EN</a>
+        </nav>
+    </div>
+    <img src="{{games.clone-wars.image}}" alt="{{games.clone-wars.title}}"/>
+</header>
+<section role="main">
+    <div class="wrapper">
+      <nav>
+        <a class="previous" href="{{games.clone-wars.previous.href}}" alt="{{games.clone-wars.previous.label}}">{{games.clone-wars.previous.label}}</a>
+        <a class="next" href="{{games.clone-wars.next.href}}" alt="{{games.clone-wars.next.label}}">{{games.clone-wars.next.label}}</a>
+      </nav>
+      <h1>{{games.clone-wars.title}}</h1>
+      <h2 data-content="{{games.clone-wars.subtitle}}">{{games.clone-wars.subtitle}}</h2>
+      <p>{{games.clone-wars.description}}</p>
+      <a href="{{ ios }}" class="download-btn">{{games.download}}</a>
+      <iframe identifier="{{games.clone-wars.video}}"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/{{games.clone-wars.video}}"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+      <nav>
+        <a class="previous" href="{{games.clone-wars.previous.href}}" alt="{{games.clone-wars.previous.label}}">{{games.clone-wars.previous.label}}</a>
+        <a class="next" href="{{games.clone-wars.next.href}}" alt="{{games.clone-wars.next.label}}">{{games.clone-wars.next.label}}</a>
+      </nav>
+    </div>
+</section>
+<!-- inject:footer -->
+<script src="/libs/bodymovin.light.min.js"></script>
+<script src="/<!-- inject:js -->"></script>
+</body>
+</html>

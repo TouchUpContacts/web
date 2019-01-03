@@ -145,45 +145,152 @@
     "description": "<p>L'idée de cette application est de vous permettre de nettoyer votre carnet de contact aussi facilement que si vous etiez en train de jouer",
     "download": "Télécharger l'appli",
     "more": "Et pleins d'autres jeux à venir...",
-    "fusion": {
-      "title": "Fusion",
-      "image": "/assets/games/jeu-fusions.svg",
-      "price": "free"
+    "clone-wars": {
+      "title": "Guerre des clones",
+      "subtitle": "-",
+      "image": "/assets/games/jeu-clones.svg",
+      "price": "free",
+      "bgColor": "#23232F",
+      "bgImage": "/assets/games/background-game-01.svg",
+      "description": "Ce jeu vous aide à supprimer rapidement des fiches totalement identiques. C’est parti pour la chasse aux clones !",
+      "href": "/fr/games/clone-wars.html",
+      "previous": {
+        "label": "Presque parfait",
+        "href": "/fr/games/almost-perfect.html"
+      },
+      "next": {
+        "label": "Fusions",
+        "href": "/fr/games/fusions.html"
+      }
     },
-    "empty": {
+    "fusions": {
+      "title": "Fusions",
+      "subtitle": "-",
+      "image": "/assets/games/jeu-fusions.svg",
+      "price": "free",
+      "bgColor": "#0267EB",
+      "bgImage": "/assets/games/background-game-02.svg",
+      "description": "Ce sont des fiches différentes qui ont le même n°de téléphone ou le même e-mail. Nous vous affichons la version fusionnée de la fiche et vous n’avez plus qu’à valider ou non la fusion.",
+      "href": "/fr/games/fusions.html",
+      "video": "ZKn6oHWxu1Y",
+      "previous": {
+        "label": "Guerre des clones",
+        "href": "/fr/games/clone-wars.html"
+      },
+      "next": {
+        "label": "Rois des majuscules",
+        "href": "/fr/games/king-of-capitals.html"
+      }
+    },
+    "king-of-capitals": {
+      "title": "Roi des majuscules",
+      "subtitle": "-",
+      "image": "/assets/games/jeu-majuscules.svg",
+      "price": "1,09€",
+      "bgColor": "#363647",
+      "bgImage": "/assets/games/background-game-03.svg",
+      "description": "On vous propose de mettre automatiquement des majuscules aux Noms et aux Prénoms. C’est plus propre comme ça non ?",
+      "href": "/fr/games/king-of-capitals.html",
+      "video": "QDHWlr8Bxas",
+      "previous": {
+        "label": "Fusions",
+        "href": "/fr/games/fusions.html"
+      },
+      "next": {
+        "label": "Contact vides",
+        "href": "/fr/games/empty-contacts.html"
+      }
+    },
+    "empty-contacts": {
       "title": "Contact vides",
+      "subtitle": "-",
       "image": "/assets/games/jeu-vides.svg",
-      "price": "free"
+      "price": "free",
+      "bgColor": "#25C6DA",
+      "bgImage": "/assets/games/background-game-04.svg",
+      "description": "Ce sont des fiches contacts qui sont totalement vides et ne vous servent donc pas à grand chose… Si on les supprimait ?",
+      "href": "/fr/games/empty-contacts.html",
+      "previous": {
+        "label": "Rois des majuscules",
+        "href": "/fr/games/king-of-capitals.html"
+      },
+      "next": {
+        "label": "Sans nom",
+        "href": "/fr/games/nameless.html"
+      }
+    },
+    "nameless": {
+      "title": "Sans nom",
+      "subtitle": "-",
+      "image": "/assets/games/jeu-sans-nom.svg",
+      "price": "free",
+      "bgColor": "#23232F",
+      "bgImage": "/assets/games/background-game-05.svg",
+      "description": "Ce sont des contacts pour qui vous n'avez rentré qu'un prénom et pas de nom de famille... Pas évident de savoir qui est qui :(",
+      "href": "/fr/games/nameless.html",
+      "previous": {
+        "label": "Contact vides",
+        "href": "/fr/games/empty-contacts.html"
+      },
+      "next": {
+        "label": "Tu veux ma photo ?",
+        "href": "/fr/games/you-want-a-piece-of-me.html"
+      }
+    },
+    "you-want-a-piece-of-me": {
+      "title": "Tu veux ma photo ?",
+      "subtitle": "-",
+      "image": "/assets/games/jeu-photos.svg",
+      "price": "free",
+      "bgColor": "#23232F",
+      "bgImage": "/assets/games/background-game-06.svg",
+      "description": "Ces contacts n'ont pas de photo. TouchUp peut vous aider à en trouver (presque par magie :)",
+      "href": "/fr/games/you-want-a-piece-of-me.html",
+      "video": "1bLyYFx_R5",
+      "previous": {
+        "label": "Sans nom",
+        "href": "/fr/games/nameless.html"
+      },
+      "next": {
+        "label": "Be international",
+        "href": "/fr/games/be-international.html"
+      }
     },
     "be-international": {
       "title": "Be international",
+      "subtitle": "-",
       "image": "/assets/games/jeu-international.svg",
-      "price": "0,99€"
+      "price": "1,09€",
+      "bgColor": "#1E529A",
+      "bgImage": "/assets/games/background-game-07.svg",
+      "description": "On met automatiquement vos numéros locaux au format international (par exemple +33 en France).",
+      "href": "/fr/games/be-international.html",
+      "previous": {
+        "label": "Tu veux ma photo ?",
+        "href": "/fr/games/you-want-a-piece-of-me.html"
+      },
+      "next": {
+        "label": "Presque parfait",
+        "href": "/fr/games/almost-perfect.html"
+      }
     },
     "almost-perfect": {
       "title": "Presque parfait",
+      "subtitle": "-",
       "image": "/assets/games/jeu-parfait.svg",
-      "price": "free"
-    },
-    "photo": {
-      "title": "Tu veux ma photo ?",
-      "image": "/assets/games/jeu-photos.svg",
-      "price": "free"
-    },
-    "clone-wars": {
-      "title": "Guerre des clones",
-      "image": "/assets/games/jeu-clones.svg",
-      "price": "free"
-    },
-    "without-name": {
-      "title": "Sans nom",
-      "image": "/assets/games/jeu-sans-nom.svg",
-      "price": "free"
-    },
-    "uppercase": {
-      "title": "Roi des majuscules",
-      "image": "/assets/games/jeu-majuscules.svg",
-      "price": "1,09€"
+      "price": "free",
+      "bgColor": "#1E529A",
+      "bgImage": "/assets/games/background-game-08.svg",
+      "description": "Il ne manque plus qu'une seule information pour que cette fiche soit complète. Nous vous aidons à trouver laquelle !",
+      "href": "/fr/games/be-international.html",
+      "previous": {
+        "label": "Be international",
+        "href": "/fr/games/be-international.html"
+      },
+      "next": {
+        "label": "Guerre des clones",
+        "href": "/fr/games/clone-wars.html"
+      }
     }
   },
   "who-we-are": {

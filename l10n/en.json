@@ -143,48 +143,155 @@
   },
   "games": {
     "title": "Les jeux sur TouchUp",
-    "description": "L'idée de cette application est de vous permettre de nettoyer votre carnet de contact aussi facilement que si vous etiez en train de jouer",
-    "download": "Télécharger l'appli",
-    "more": "Et pleins d'autres jeux à venir...",
-    "fusion": {
-      "title": "Fusion",
-      "image": "/assets/games/jeu-fusions.svg",
-      "price": "free"
+    "description": "<p>L'idée de cette application est de vous permettre de nettoyer votre carnet de contact aussi facilement que si vous etiez en train de jouer",
+    "download": "Download the App",
+    "more": "And more games to come...",
+    "clone-wars": {
+      "title": "Clone wars",
+      "subtitle": "-",
+      "image": "/assets/games/jeu-clones.svg",
+      "price": "free",
+      "bgColor": "#23232F",
+      "bgImage": "/assets/games/background-game-01.svg",
+      "description": "This game helps you to delete contacts that are totally identical. Let’s begin the clone war!",
+      "href": "/en/games/clone-wars.html",
+      "previous": {
+        "label": "Almost perfect",
+        "href": "/en/games/almost-perfect.html"
+      },
+      "next": {
+        "label": "Fusions",
+        "href": "/en/games/fusions.html"
+      }
     },
-    "empty": {
-      "title": "Contact vides",
+    "fusions": {
+      "title": "Fusions",
+      "subtitle": "-",
+      "image": "/assets/games/jeu-fusions.svg",
+      "price": "free",
+      "bgColor": "#0267EB",
+      "bgImage": "/assets/games/background-game-02.svg",
+      "description": "These are contacts with the same phone number or the same e-mail. We merge them, show you the new version and you just need to validate it.",
+      "href": "/en/games/fusions.html",
+      "video": "ZKn6oHWxu1Y",
+      "previous": {
+        "label": "Clone wars",
+        "href": "/en/games/clone-wars.html"
+      },
+      "next": {
+        "label": "King of capitals",
+        "href": "/en/games/king-of-capitals.html"
+      }
+    },
+    "king-of-capitals": {
+      "title": "King of capitals",
+      "subtitle": "-",
+      "image": "/assets/games/jeu-majuscules.svg",
+      "price": "1,09€",
+      "bgColor": "#363647",
+      "bgImage": "/assets/games/background-game-03.svg",
+      "description": "We can automatically add capital letters to your contact First Name and Last Name. Much more cleaner right?",
+      "href": "/fr/games/king-of-capitals.html",
+      "video": "QDHWlr8Bxas",
+      "previous": {
+        "label": "Fusions",
+        "href": "/en/games/fusions.html"
+      },
+      "next": {
+        "label": "Empty contacts",
+        "href": "/en/games/empty-contacts.html"
+      }
+    },
+    "empty-contacts": {
+      "title": "Empty contacts",
+      "subtitle": "-",
       "image": "/assets/games/jeu-vides.svg",
-      "price": "free"
+      "price": "free",
+      "bgColor": "#25C6DA",
+      "bgImage": "/assets/games/background-game-04.svg",
+      "description": "These contacts are empty… Are they really useful for you? Let’s delete them!",
+      "href": "/en/games/empty-contacts.html",
+      "previous": {
+        "label": "Rois des majuscules",
+        "href": "/en/games/king-of-capitals.html"
+      },
+      "next": {
+        "label": "Nameless",
+        "href": "/en/games/nameless.html"
+      }
+    },
+    "nameless": {
+      "title": "Nameless",
+      "subtitle": "-",
+      "image": "/assets/games/jeu-sans-nom.svg",
+      "price": "free",
+      "bgColor": "#23232F",
+      "bgImage": "/assets/games/background-game-05.svg",
+      "description": "These contacts don't have any family name... Difficult to know who is who :(",
+      "href": "/en/games/nameless.html",
+      "previous": {
+        "label": "Empty contacts",
+        "href": "/en/games/empty-contacts.html"
+      },
+      "next": {
+        "label": "You want a piece of me?",
+        "href": "/en/games/you-want-a-piece-of-me.html"
+      }
+    },
+    "you-want-a-piece-of-me": {
+      "title": "You want a piece of me?",
+      "subtitle": "-",
+      "image": "/assets/games/jeu-photos.svg",
+      "price": "free",
+      "bgColor": "#23232F",
+      "bgImage": "/assets/games/background-game-06.svg",
+      "description": "These contacts don't have a picture. We can help you to find some!",
+      "href": "/en/games/you-want-a-piece-of-me.html",
+      "video": "1bLyYFx_R5",
+      "previous": {
+        "label": "Nameless",
+        "href": "/en/games/nameless.html"
+      },
+      "next": {
+        "label": "Be international",
+        "href": "/en/games/be-international.html"
+      }
     },
     "be-international": {
       "title": "Be international",
+      "subtitle": "-",
       "image": "/assets/games/jeu-international.svg",
-      "price": "0,99€"
+      "price": "1,09€",
+      "bgColor": "#1E529A",
+      "bgImage": "/assets/games/background-game-07.svg",
+      "description": "We automatically correct your local phone numbers in international format.",
+      "href": "/en/games/be-international.html",
+      "previous": {
+        "label": "You want a piece of me?",
+        "href": "/en/games/you-want-a-piece-of-me.html"
+      },
+      "next": {
+        "label": "Almost perfect",
+        "href": "/en/games/almost-perfect.html"
+      }
     },
     "almost-perfect": {
-      "title": "Presque parfait",
+      "title": "Almost perfect",
+      "subtitle": "-",
       "image": "/assets/games/jeu-parfait.svg",
-      "price": "free"
-    },
-    "photo": {
-      "title": "Tu veux ma photo ?",
-      "image": "/assets/games/jeu-photos.svg",
-      "price": "free"
-    },
-    "clone-wars": {
-      "title": "Guerre des clones",
-      "image": "/assets/games/jeu-clones.svg",
-      "price": "free"
-    },
-    "without-name": {
-      "title": "Sans nom",
-      "image": "/assets/games/jeu-sans-nom.svg",
-      "price": "free"
-    },
-    "uppercase": {
-      "title": "Roi des majuscules",
-      "image": "/assets/games/jeu-majuscules.svg",
-      "price": "1,09€"
+      "price": "free",
+      "bgColor": "#1E529A",
+      "bgImage": "/assets/games/background-game-08.svg",
+      "description": "There is just one information missing and this contact will be perfect… We help you to find which one.",
+      "href": "/en/games/be-international.html",
+      "previous": {
+        "label": "Be international",
+        "href": "/en/games/be-international.html"
+      },
+      "next": {
+        "label": "Clone wars",
+        "href": "/en/games/clone-wars.html"
+      }
     }
   },
   "who-we-are": {
