@@ -34,9 +34,8 @@
   },
   "ios": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336",
   "levels": {
-    "title": "Les Jeux sur TouchUp",
-    "description": "L'idée de cette application est de vous permettre de nettoyer votre carnet de contact aussi facilement que si vous etiez en train de jouer",
-    "more": "Et pleins d'autres jeux à venir...",
+    "title": "The levels on TouchUp",
+    "description": "Each time you improve your notebook, you increase your level to get closer to the stars!",
     "download": "Download the App",
     "six-feet-under": {
       "title": "Six feet under",
@@ -142,8 +141,8 @@
     }
   },
   "games": {
-    "title": "Les jeux sur TouchUp",
-    "description": "<p>L'idée de cette application est de vous permettre de nettoyer votre carnet de contact aussi facilement que si vous etiez en train de jouer",
+    "title": "The games on TouchUp",
+    "description": "The idea of this application is to allow you to clean your contact book as easily as if you were playing.",
     "download": "Download the App",
     "more": "And more games to come...",
     "clone-wars": {
