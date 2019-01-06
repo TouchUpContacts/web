@@ -154,6 +154,7 @@
       "bgImage": "/assets/games/background-game-01.svg",
       "description": "This game helps you to delete contacts that are totally identical. Let’s begin the clone war!",
       "href": "/en/games/clone-wars.html",
+      "video": "HXyQmxTtGCo",
       "previous": {
         "label": "Almost perfect",
         "href": "/en/games/almost-perfect.html"

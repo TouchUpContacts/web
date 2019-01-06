@@ -154,6 +154,7 @@
       "bgImage": "/assets/games/background-game-01.svg",
       "description": "Ce jeu vous aide à supprimer rapidement des fiches totalement identiques. C’est parti pour la chasse aux clones !",
       "href": "/fr/games/clone-wars.html",
+      "video": "HXyQmxTtGCo",
       "previous": {
         "label": "Presque parfait",
         "href": "/fr/games/almost-perfect.html"
