@@ -32,7 +32,7 @@
   "header": {
     "home": "Accueil"
   },
-  "ios": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336",
+  "ios": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336?mt=8",
   "levels": {
     "title": "Les niveaux sur TouchUp",
     "description": "A chaque fois que vous améliorez votre carnet, vous augmentez votre niveau pour vous rapprocher des étoiles !",
@@ -331,7 +331,7 @@
       },
       "ios": {
         "label": "Télécharger TouchUp sur iOS",
-        "target": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336"
+        "target": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336?mt=8"
       }
     },
     "like": {

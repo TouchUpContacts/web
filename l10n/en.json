@@ -32,7 +32,7 @@
   "header": {
     "home": "Home"
   },
-  "ios": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336",
+  "ios": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336?mt=8",
   "levels": {
     "title": "The levels on TouchUp",
     "description": "Each time you improve your notebook, you increase your level to get closer to the stars!",
@@ -331,7 +331,7 @@
       },
       "ios": {
         "label": "Download TouchUp for iOS",
-        "target": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336"
+        "target": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336?mt=8"
       }
     },
     "like": {
