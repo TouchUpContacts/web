@@ -234,19 +234,19 @@
         "href": "/en/games/empty-contacts.html"
       },
       "next": {
-        "label": "You want a piece of me?",
-        "href": "/en/games/you-want-a-piece-of-me.html"
+        "label": "You want my picture?",
+        "href": "/en/games/you-want-my-picture.html"
       }
     },
-    "you-want-a-piece-of-me": {
-      "title": "You want a piece of me?",
+    "you-want-my-picture": {
+      "title": "You want my picture?",
       "subtitle": "-",
       "image": "/assets/games/jeu-photos.svg",
       "price": "free",
       "bgColor": "#23232F",
       "bgImage": "/assets/games/background-game-06.svg",
       "description": "These contacts don't have a picture. We can help you to find some!",
-      "href": "/en/games/you-want-a-piece-of-me.html",
+      "href": "/en/games/you-want-my-picture.html",
       "video": "1bLyYFx_R5s",
       "previous": {
         "label": "Nameless",
@@ -267,8 +267,8 @@
       "description": "We automatically correct your local phone numbers in international format.",
       "href": "/en/games/be-international.html",
       "previous": {
-        "label": "You want a piece of me?",
-        "href": "/en/games/you-want-a-piece-of-me.html"
+        "label": "You want my picture?",
+        "href": "/en/games/you-want-my-picture.html"
       },
       "next": {
         "label": "Almost perfect",

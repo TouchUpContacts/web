@@ -235,10 +235,10 @@
       },
       "next": {
         "label": "Tu veux ma photo ?",
-        "href": "/fr/games/you-want-a-piece-of-me.html"
+        "href": "/fr/games/you-want-my-picture.html"
       }
     },
-    "you-want-a-piece-of-me": {
+    "you-want-my-picture": {
       "title": "Tu veux ma photo ?",
       "subtitle": "-",
       "image": "/assets/games/jeu-photos.svg",
@@ -246,7 +246,7 @@
       "bgColor": "#23232F",
       "bgImage": "/assets/games/background-game-06.svg",
       "description": "Ces contacts n'ont pas de photo. TouchUp peut vous aider à en trouver (presque par magie :)",
-      "href": "/fr/games/you-want-a-piece-of-me.html",
+      "href": "/fr/games/you-want-my-picture.html",
       "video": "1bLyYFx_R5s",
       "previous": {
         "label": "Sans nom",
@@ -268,7 +268,7 @@
       "href": "/fr/games/be-international.html",
       "previous": {
         "label": "Tu veux ma photo ?",
-        "href": "/fr/games/you-want-a-piece-of-me.html"
+        "href": "/fr/games/you-want-my-picture.html"
       },
       "next": {
         "label": "Presque parfait",
