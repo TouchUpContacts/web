@@ -722,6 +722,26 @@ body {
   }
 }
 
+.page-terms-of-sale {
+  [role="main"] {
+    text-align: justify;
+  }
+
+  section {
+    margin-bottom: 65px;
+  }
+
+  em {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+}
+
 footer {
   background-color: var(--white-variant);
   display: grid;
