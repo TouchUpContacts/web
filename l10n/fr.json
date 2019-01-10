@@ -171,7 +171,7 @@
       "price": "free",
       "bgColor": "#0267EB",
       "bgImage": "/assets/games/background-game-02.svg",
-      "description": "Ce sont des fiches différentes qui ont le même n°de téléphone ou le même e-mail. Nous vous affichons la version fusionnée de la fiche et vous n’avez plus qu’à valider ou non la fusion.",
+      "description": "Ce sont des fiches différentes qui ont le même n° de téléphone ou le même e-mail. Nous vous affichons la version fusionnée de la fiche et vous n’avez plus qu’à valider ou non la fusion.",
       "href": "/fr/games/fusions.html",
       "video": "ZKn6oHWxu1Y",
       "previous": {
@@ -179,7 +179,7 @@
         "href": "/fr/games/clone-wars.html"
       },
       "next": {
-        "label": "Rois des majuscules",
+        "label": "Roi des majuscules",
         "href": "/fr/games/king-of-capitals.html"
       }
     },
@@ -212,7 +212,7 @@
       "description": "Ce sont des fiches contacts qui sont totalement vides et ne vous servent donc pas à grand chose… Si on les supprimait ?",
       "href": "/fr/games/empty-contacts.html",
       "previous": {
-        "label": "Rois des majuscules",
+        "label": "Roi des majuscules",
         "href": "/fr/games/king-of-capitals.html"
       },
       "next": {
