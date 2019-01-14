@@ -2,12 +2,12 @@
   "mainTitle": "Do some cleaning in your address book while having fun!",
   "analyse": {
     "title": "Let’s analyze your contacts",
-    "content": "How messy is your address book? Super-clean? Or with clones, empty or useless contacts everywhere? TouchUp will tell you all about it!",
+    "content": "What is <a href=\"/en/levels.html\">the level</a> of your address book? Super-clean? Or with clones, empty or useless contacts everywhere? TouchUp will tell you all about it!",
     "cta": "Let’s analyse it"
   },
   "play": {
     "title": "Improving while playing",
-    "content": "You can resolve all your address book issues while having fun and playing TouchUp little games!",
+    "content": "You can resolve all your address book issues while having fun and playing <a href=\"/en/games.html\">TouchUp little games</a>!",
     "cta": "I want to play"
   },
   "keep": {
