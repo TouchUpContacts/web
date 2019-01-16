@@ -11,12 +11,32 @@
 <header
     style="background-color:{{games.clone-wars.bgColor}};background-image:url({{games.clone-wars.bgImage}})">
     <div class="action-wrapper">
-        <div class="touch-up-logo" id="list-touch-up-logo"></div>
-        <a href="/{{lang}}/">{{header.home}}</a>
-        <nav class="lang-selector">
-            <a href="/fr/games/clone-wars.html">FR</a>
-            <a href="/en/games/clone-wars.html">EN</a>
-        </nav>
+      <input type="checkbox" id="mainmenu-checkbox"/>
+      <label for="mainmenu-checkbox">
+        <svg width="30" height="30" id="burger-icon">
+          <g fill="#FFF" fill-rule="evenodd">
+            <path d="M4 8h21v2H4zM4 14h21v2H4zM4 20h21v2H4z"/>
+          </g>
+        </svg>
+        <svg width="30" height="30" id="close-icon">
+          <g fill="#FFF" fill-rule="evenodd">
+            <path d="M19.95 8.636l1.414 1.414L10.05 21.364 8.636 19.95z"/>
+            <path d="M19.95 8.636l1.414 1.414L10.05 21.364 8.636 19.95z"/>
+            <path d="M21.364 19.95l-1.414 1.414L8.636 10.05l1.414-1.414z"/>
+          </g>
+        </svg>
+      </label>
+      <nav class="mainmenu">
+        <a href="{{header.home.target}}">{{header.home.label}}</a>
+        <a class="active" href="{{header.games.target}}">{{header.games.label}}</a>
+        <a href="{{header.levels.target}}">{{header.levels.label}}</a>
+        <a href="{{header.us.target}}" class="mobile">{{header.us.label}}</a>
+        <a href="{{header.cgu.target}}" class="mobile">{{header.cgu.label}}</a>
+      </nav>
+      <nav class="lang-selector">
+          <a href="/fr/games/clone-wars.html">FR</a>
+          <a href="/en/games/clone-wars.html">EN</a>
+      </nav>
     </div>
     <img src="{{games.clone-wars.image}}" alt="{{games.clone-wars.title}}"/>
 </header>

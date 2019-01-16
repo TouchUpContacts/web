@@ -30,7 +30,26 @@
     "cta": "Allez, testez l’appli"
   },
   "header": {
-    "home": "Accueil"
+    "home": {
+      "label": "Accueil",
+      "target": "/fr"
+    },
+    "games": {
+      "label": "Les jeux",
+      "target": "/fr/games.html"
+    },
+    "levels": {
+      "label": "Les niveaux",
+      "target": "/fr/levels.html"
+    },
+    "us": {
+      "label": "Nous",
+      "target": "/fr/who-we-are.html"
+    },
+    "cgu": {
+      "label": "CGU",
+      "target": "/fr/terms-of-service.html"
+    }
   },
   "ios": "https://itunes.apple.com/fr/app/touchup-corrigez-vos-contacts/id1128944336?mt=8",
   "levels": {

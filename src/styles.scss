@@ -20,6 +20,7 @@ $easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
   --white: #fff;
   --white-variant: #f0f5f7;
   --price: #f9c806;
+  --dark-violet: #302f42;
 }
 
 * {
@@ -39,28 +40,54 @@ body {
   font-family: 'Open Sans', sans-serif;
   width: 100vw;
   overflow-x: hidden;
+
+  &.menu-opened {
+    overflow: hidden;
+  }
 }
 
-.lang-selector {
+header {
+  input[type="checkbox"], label {
+    display: none;
+  }
+}
+
+.lang-selector, .mainmenu {
   a {
-    font-weight: 20px;
     color: var(--white);
     font-weight: bold;
     opacity: .4;
     text-decoration: none;
+    text-transform: uppercase;
 
     &.active {
       opacity: 1;
+
+      &::after {
+        opacity: .4;
+      }
     }
 
-    &:last-child::before {
+    &:not(:last-child)::after {
       content: '|';
       height: 20px;
       position: relative;
       top: -3px;
       font-size: 12px;
-      margin-right: 4px;
+      margin: 0 4px;
     }
+  }
+}
+
+.mainmenu {
+  display: flex;
+
+  .mobile {
+    display: none;
+  }
+
+  a:nth-child(3)::after {
+    display: none;
   }
 }
 
@@ -103,29 +130,14 @@ body {
     padding-top: 35px;
     min-height: 100vh;
 
-    .lang-selector {
+    header {
       position: absolute;
-      top: 15px; right: 40px;
+      top: 15px;
+      width: 100%;
+      display: flex;
 
-      a {
-        font-weight: 20px;
-        color: var(--white);
-        font-weight: bold;
-        opacity: .4;
-        text-decoration: none;
-
-        &.active {
-          opacity: 1;
-        }
-
-        &:last-child::before {
-          content: '|';
-          height: 20px;
-          position: relative;
-          top: -3px;
-          font-size: 12px;
-          margin-right: 4px;
-        }
+      .lang-selector {
+        margin: auto 30px auto auto;
       }
     }
   }
@@ -221,6 +233,12 @@ body {
 /*** Take care of ***/
 .take-care-of {
   background-color: #20C7B6;
+
+  header {
+    label {
+      margin-left: 20px;
+    }
+  }
 }
 
 #arrow-down {
@@ -839,6 +857,67 @@ footer {
 
   body {
     font-size: 15px;
+  }
+
+  header {
+
+    label {
+      display: block;
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    #close-icon {
+      display: none;
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      left: -100vw;
+    }
+
+    .mainmenu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      margin: 0;
+      z-index: 1;
+      background-color: var(--dark-violet);
+      padding: 80px;
+
+      .mobile {
+        display: block;
+      }
+    }
+
+    input[type="checkbox"]:checked {
+      & + label {
+        #burger-icon {
+          display: none;
+        }
+
+        #close-icon {
+          display: block;
+        }
+      }
+
+      & ~ .mainmenu {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        a {
+          text-align: center;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   .sections-container {

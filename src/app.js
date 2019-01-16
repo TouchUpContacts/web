@@ -49,7 +49,13 @@
     if((new RegExp(`^${item.href}`)).test(window.location.href)) {
       item.classList.add('active');
     }
-  })
+  });
+
+  document.getElementById('mainmenu-checkbox').addEventListener('change', function(e) {
+    e.currentTarget.checked
+      ? document.body.classList.add('menu-opened')
+      : document.body.classList.remove('menu-opened');
+  });
 
   window.TouchUpApp = window.TouchUpApp || Object.create(touchUpApp);
 }());
