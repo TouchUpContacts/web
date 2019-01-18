@@ -43,6 +43,25 @@ body {
 
   &.menu-opened {
     overflow: hidden;
+    max-height: 100vh;
+     .sections-container {
+       max-height: 100vh;
+       overflow: hidden;
+       & > section:not(.take-care-of) {
+         display: none;
+       }
+
+       .take-care-of {
+         max-height: 100vh;
+         min-height: initial;
+         overflow: hidden;
+         padding: 0;
+       }
+     }
+
+    footer {
+      display: none;
+    }
   }
 }
 
