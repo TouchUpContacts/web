@@ -8,6 +8,7 @@
   "play": {
     "title": "Jouons pour l’améliorer",
     "content": "Résoudre tous les soucis de votre carnet de contacts tout en vous amusant c’est désormais possible grâce à <a href=\"/fr/games.html\">nos petits jeux</a> !",
+    "content_for_meta": "Résoudre tous les soucis de votre carnet de contacts tout en vous amusant c’est désormais possible grâce à nos petits jeux !",
     "cta": "Je veux jouer"
   },
   "keep": {
